@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+body{
+  overflow-x: hidden;
+  text-align: center;
+  background-color: grey;
+}
+div#header-container{
+    text-align: center;
+    margin: 0 auto;
+    background-color: aqua;
+    width: 100vw;
+}
+div#header-container div.header-top{
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+div#header-container div.header-top div{
+    /* display: inline-block; */
+    padding:0px 5px ;
+    background-color: rgb(246, 246, 246);
+}
+/* div#header-container div.header-top div#header-top-logo{
+    
+} */
+div#header-container div.header-top div#header-top-logo img{
+    width: 120px;
+    padding: 15px 0px;
+}
+div#header-container div.header-top div#header-top-deliver{
+    background-color: rgb(246, 246, 246);
+    /* flex-grow: 1; */
+    text-align: left;
+    font-family: 'Markazi Text', serif;
+    padding: 10px 5px;
+}
+div#header-container div.header-top div#header-top-search{
+    flex-grow: 4;
+    padding: 10px 0;
+    background-color: rgb(246, 246, 246);
+    min-width: 249px;
+
+}
+div#header-container div.header-top div#header-top-search div{
+    position: relative;
+}
+div#header-container div.header-top div#header-top-search div select{
+    position: absolute;
+    height: 40px;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 5px 0 0 5px;
+}
+div#header-container div.header-top div#header-top-search div input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+}
+div#header-container div.header-top div#header-top-search div div.header-top-search-submit{
+    width: 5vw;
+    height: 40px;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 0 5px 5px 0;
+    background-color: #F3A847;
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+}
+div#header-container div.header-top div#header-top-nation{
+    /* flex-grow: 1; */
+    background-color: rgb(246, 246, 246);
+    padding: 25px 5px;
+}
+div#header-container div.header-top div#header-top-nation div.header-top-nation-dropdown img{
+    width: 30px;
+    border-radius: 3px;
+}
+div#header-container div.header-top div#heador-top-sign{
+    background-color: rgb(246, 246, 246);
+    /* flex-grow: 1; */
+    padding: 10px 10px;
+    font-family: 'Markazi Text', serif;
+}
+div#header-container div.header-top div#heador-top-orders{
+    background-color: rgb(246, 246, 246);
+    /* flex-grow: 1; */
+    padding: 10px 10px;
+    font-family: 'Markazi Text', serif;
+}
+div#header-container div.header-top div#header-top-cart{
+    background-color: rgb(246, 246, 246);
+    /* flex-grow: 1; */
+    padding: 10px 10px;
+    font-family: 'Markazi Text', serif;
+}
