@@ -171,11 +171,268 @@ div#header-container div.header-bottom div.header-bottom-All p{
     position: relative;
     left: 40px;
     top: 10px;
-    
-    
-
-
 }
 div#header-container div.header-bottom div.header-bottom-All i{
     position: absolute;
+}
+
+
+        /* end header bottom */
+
+
+        /* start location choose */
+
+div#loc-choose{
+    position: relative;
+    top: 80px;
+    width: 370px;
+    /* padding: 20px 0; */
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
+    display: none;
+}
+div#loc-choose div.loc-choose-top{
+    background-color: #EFEFEF;
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 15px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.077);
+}
+div#loc-choose div.loc-choose-bott{
+    padding: 10px 0;
+    text-align: center;
+}
+div#loc-choose div.loc-choose-bott p{
+    background-color: white;
+    text-align: left;
+    padding: 0 40px;
+    font-size: 13px;
+}
+div#loc-choose div.loc-choose-bott button{
+    background-color: #FFD832;
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+div#loc-choose div.loc-choose-bott>button{
+    width: 325px;
+    margin-top: 15px;
+}
+div#loc-choose div.loc-choose-bott span{
+    font-size: 13px;
+    display: block;
+    margin-top: 15px;
+}
+div#loc-choose div.loc-choose-bott span.loc-choose-bott-zip-divide::before{
+    content:"_______________  ";
+    color:rgba(0, 0, 0, 0.153) ;
+    position: relative;
+    bottom: 5px;
+}
+div#loc-choose div.loc-choose-bott span.loc-choose-bott-zip-divide::after{
+    content:"    _______________";
+    color:rgba(0, 0, 0, 0.153) ;
+    position: relative;
+    bottom: 5px;
+
+}
+div#loc-choose div.loc-choose-bott div#US-zip-code{
+    background-color: white;
+    margin-top: 15px;
+}
+div#loc-choose div.loc-choose-bott div#US-zip-code input{
+    padding: 8px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 3px;
+    width: 220px;
+    margin-right:  5px; ;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.34);
+
+}
+div#loc-choose div.loc-choose-bott div#US-zip-code button{
+    width: 95px;
+    outline: 0.5px solid rgba(0, 0, 0, 0.34);
+    background-color: white;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.34);
+}
+div#loc-choose div.loc-choose-bott div#US-zip-code p.US-zip-code-error{
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 0;
+    margin-left: 22px;
+    display: none;
+
+}
+div#loc-choose div.loc-choose-bott span.loc-choose-bott-ship-divide::before{
+    content:"________________________  ";
+    color:rgba(0, 0, 0, 0.153) ;
+    position: relative;
+    bottom: 5px;
+}
+div#loc-choose div.loc-choose-bott span.loc-choose-bott-ship-divide::after{
+    content:"    ________________________";
+    color:rgba(0, 0, 0, 0.153) ;
+    position: relative;
+    bottom: 5px;
+
+}
+
+div#loc-choose div.loc-choose-bott select{
+    width: 325px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    border: none;
+    margin-bottom: 10px;
+    outline: 0.5px solid rgba(0, 0, 0, 0.34);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.34);
+    background-color: #E3E6E6;
+}
+div#loc-choose div.loc-choose-bott button:last-child{
+    width: 60px;
+    position: relative;
+    left: 36%;
+    margin: 10px 0;
+}
+
+
+/* end location choose */
+
+
+/* start nation choose */
+
+div#nation-choose{
+    width: 250px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    display: none;
+}
+div#nation-choose div{
+    text-align: left;
+    padding: 8px 10px;
+
+}
+div#nation-choose div.nation-choose-part-one p{
+    display: inline;
+    margin-right: 30px;
+}
+div#nation-choose div.nation-choose-part-one span a{
+    color: #1e75de;
+    font-size: 13px;
+}
+div#nation-choose div.nation-choose-part-three p{
+    display: inline;
+    margin-right: 30px;
+
+}
+div#nation-choose div.nation-choose-part-three span a{
+    color: #1e75de;
+    font-size: 13px;
+}
+div#nation-choose div.nation-choose-part-four{
+    padding-bottom: 30px;
+}
+div#nation-choose div.nation-choose-part-four a{
+    position: relative;
+    top: 30px;
+    color: #1e75de;
+    left: 30px;
+}
+
+/* end nation choose */
+
+/* start header sign in */
+
+div#header-sign-in{
+    width: 500px;
+    background-color:white;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    display: none;
+}
+div#header-sign-in div.header-sign-in-top{
+    background-color: white;
+    padding: 15px 0;
+    border-radius: 5px 5px 0 0;
+}
+div#header-sign-in div.header-sign-in-top a div{
+    width: 250px;
+    height: 40px;
+    background-color: rgb(255, 196, 0);
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+    color: #232F3E;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.34);
+    margin-bottom: 10px;
+}
+div#header-sign-in div.header-sign-in-top p{
+    display: inline;
+    margin-right: 10px;
+}
+div#header-sign-in div.header-sign-in-top span a{
+    color: #1e75de;
+}
+div#header-sign-in div.header-sign-in-bott{
+    display: flex;
+    flex-direction:row;
+    border-radius: 0 0 5px 5px;
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-left{
+    background-color: white;
+    text-align: left;
+    padding: 15px 10px;
+    flex-grow: 1;
+    border-radius: 0 0 0 5px;
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-left h3{
+    margin-bottom: 10px;
+
+    
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-left a{
+    color: #232F3E;
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-divide{
+    width: 1px;
+    height: 250px;
+    background-color: #E3E6E6;
+    position: relative;
+    right: 20px;
+    top: 10px;
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-right{
+    background-color: white;
+    text-align: left;
+    padding: 15px 10px;
+    flex-grow: 1;
+    border-radius: 0 0 5px 0;
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-right h3{
+    margin-bottom: 10px;
+
+    
+}
+div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-right a{
+    color: #232F3E;
 }
