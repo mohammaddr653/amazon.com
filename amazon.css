@@ -61,6 +61,7 @@ div#header-container div.header-top div#header-top-deliver{
     text-align: left;
     color: #232F3E;
     margin: 5px 5px;
+    min-width: 170px;
 }
 div#header-container div.header-top div#header-top-deliver:hover{
     box-shadow: 0 0 1px 2px #232F3E;
@@ -75,7 +76,7 @@ div#header-container div.header-top div#header-top-search{
     flex-grow: 4;
     padding: 10px 0;
     background-color: rgb(246, 246, 246);
-    min-width: 249px;
+    min-width: 300px;
 
 }
 div#header-container div.header-top div#header-top-search div{
@@ -121,6 +122,7 @@ div#header-container div.header-top div#heador-top-sign{
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: left;
+    min-width: 115px;
 }
 div#header-container div.header-top div#heador-top-sign{
     color: #232F3E;
@@ -137,6 +139,7 @@ div#header-container div.header-top div#heador-top-orders{
     font-family: 'Source Sans Pro', sans-serif;
     text-align: left;
     color: #232F3E;
+    min-width: 70px;
 }
 div#header-container div.header-top div#heador-top-orders p:nth-child(1){
     font-size: 15px;
@@ -209,6 +212,15 @@ div#header-container div.header-bottom div.header-bottom-All p{
 }
 div#header-container div.header-bottom div.header-bottom-All i{
     position: absolute;
+}
+div#header-container div.header-bottom div.header-bottom-today{
+    min-width:95px;
+}
+div#header-container div.header-bottom div.header-bottom-customer{
+    min-width:120px;
+}
+div#header-container div.header-bottom div.header-bottom-gift{
+    min-width:75px;
 }
 
 
@@ -360,8 +372,11 @@ div#nation-choose{
     font-size: 15px;
     border-radius: 5px;
     display: none;
-    position: relative;
+    position: absolute;
     z-index: 5;
+    left: 65vw;
+    top: 60px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
 }
 div#nation-choose div{
     text-align: left;
@@ -408,13 +423,18 @@ div#header-sign-in{
     font-size: 15px;
     border-radius: 5px;
     display: none;
+    position: absolute;
+    z-index: 5;
+    left: 60vw;
+    top: 60px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
 }
 div#header-sign-in div.header-sign-in-top{
     background-color: white;
     padding: 15px 0;
     border-radius: 5px 5px 0 0;
 }
-div#header-sign-in div.header-sign-in-top a div{
+div#header-sign-in div.header-sign-in-top div{
     width: 250px;
     height: 40px;
     background-color: rgb(255, 196, 0);
@@ -475,7 +495,6 @@ div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-right h3{
 div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-right a{
     color: #232F3E;
 }
-
         /* end header sign in */
 
         
