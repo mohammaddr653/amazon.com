@@ -30,7 +30,7 @@
                             <img src="images/Amazon_logo.svg.png" alt="">
                     </div>
                 </a>
-                <div id="header-top-deliver">
+                <div id="header-top-deliver" onclick="locChooseOpen()">
                     <p>Deliver to</p>
                     <p class="header-top-deliver-loc"><i class="material-icons" style="font-size:20px">location_on</i>Iran,Islamic Republic</p>
                 </div>
@@ -142,6 +142,7 @@
                 <br>
                 <input type="checkbox"> English - EN
             </div>
+        
             <hr>
             <div class="nation-choose-part-two">
                 <input type="checkbox"> English - EN <br>
@@ -155,13 +156,15 @@
                 <br>
                 <br>
                 <p>$-USD-US Dollar </p><span><a href="">Change</a></span>
+            
             </div>
             <hr>
             <div class="nation-choose-part-four">
                 <p>You are shopping on Amazon.com</p>
                 <a href="">change country/region</a>
             </div>
-        </div>
+        
+        </div>          
         <div id="header-sign-in">
             <div class="header-sign-in-top">
                 <a href=""><div><h2>Sign in</h2></div></a>
@@ -192,8 +195,11 @@
                 </div>
             </div>
         </div>
+        <div id="header-background-black-screen" onclick="locChooseClose()"></div>
+        <div id="body-background-black-screen" onclick="locChooseClose()"></div>
     </header>
     <main></main>
     <footer></footer>
+    <script src="amazon.js"></script>
 </body>
 </html>
