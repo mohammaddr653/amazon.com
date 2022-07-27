@@ -511,8 +511,240 @@ div#header-background-black-screen{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.636);
     display: none;
     top: 0;
     z-index: 4;
+}
+
+            /* start header slider */
+
+div#header-slider{
+    width: 400px;
+    background-color:white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    font-weight: bolder;
+    z-index: 5;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
+    transition-property: left;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+div#header-slider div.header-slider-container{
+    height: 100vh;
+    position: relative;
+    overflow: scroll;
+}
+div#header-slider>div:not(div.header-slider-hello){
+    text-align: left;
+    /* padding: 0 0px; */
+}
+div#header-slider div.header-slider-hello{
+    background-color: #253343;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    height: 50px;
+    color: white;
+    padding: 7px;
+    width: 400px;
+    position: fixed;
+    z-index: 6;
+}
+div#header-slider i.fa-chevron-right{
+    position:absolute;
+    right: 15px;
+    margin-top: 20px;
+    font-size: 15px !important;
+}
+div#header-slider i.fa-chevron-down{
+    position:absolute;
+    right: 275px;
+    margin-top: 16px;
+}
+div#header-slider div.header-slider-dig{
+    background-color: white;
+    line-height: 50px;
+}
+div#header-slider div.header-slider-dig div{
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+
+}
+div#header-slider div.header-slider-dig div:hover:not(div.header-slider-dig-h2){
+    background-color: #232f3e32;
+    cursor: pointer;
+}
+div#header-slider div.header-slider-dep{
+    background-color: white;
+    line-height: 50px;
+}
+div#header-slider div.header-slider-dep div{
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+
+}
+div#header-slider div.header-slider-dep div:hover:not(div.header-slider-dep-h2):not(div.header-slider-see){
+    background-color: #232f3e32;
+    cursor: pointer;
+}
+div#header-slider div.header-slider-prog{
+    background-color: white;
+    line-height: 50px;
+}
+div#header-slider div.header-slider-prog div{
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+
+}
+div#header-slider div.header-slider-prog div:hover:not(div.header-slider-prog-h2):not(div.header-slider-see){
+    background-color: #232f3e32;
+    cursor: pointer;
+}
+div#header-slider div.header-slider-help{
+    background-color: white;
+    line-height: 50px;
+}
+div#header-slider div.header-slider-help div{
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+}
+div#header-slider div.header-slider-help div:hover:not(div.header-slider-help-h2){
+    background-color: #232f3e32;
+    cursor: pointer;
+}
+div#header-slider div.header-slider-see{
+    padding-left: 0 !important;
+    height: 0;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 1s;
+    position: relative;
+}
+div#header-slider div.header-slider-dep:hover div.header-slider-see{
+    /* height: 300px !important; */
+    transition-duration: 1s;
+}
+div#header-slider div.header-slider-prog:hover div.header-slider-see{
+    transition-duration: 1s;
+}
+
+            /* end header slider */
+
+            /* start header slider menu 2 */
+
+div#dig-group-num{
+    position: absolute;
+    background-color: white;
+    width:100%  !important;
+    z-index: 7;
+    top: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    color: #232F3E;
+    text-align: center;
+    overflow: scroll;
+    left: 400px;
+    transition-property: left;
+    transition-duration: 1s;
+}
+div#dig-group-num div div{
+    background-color: white;
+    padding-left:30px;
+    margin-top: 10px;
+    line-height: 50px;
+    text-align: left;
+}
+div#dig-group-num div a div {
+    color: #232F3E;
+}
+div#dig-group-num i.fa-arrow-circle-left{
+    position: relative;
+    top: 2px;
+}
+div#dig-group-num div.header-slider-menu2-back:hover{
+    cursor: pointer !important;
+}
+
+
+
+
+
+div#dep-group-num{
+    position: absolute;
+    background-color: white;
+    width:100%  !important;
+    z-index: 7;
+    top: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    color: #232F3E;
+    text-align: center;
+    overflow: scroll;
+    left: 400px;
+    transition-property: left;
+    transition-duration: 1s;
+}
+div#dep-group-num div div{
+    background-color: white;
+    padding-left:30px;
+    margin-top: 10px;
+    line-height: 50px;
+    text-align: left;
+}
+div#dep-group-num div a div {
+    color: #232F3E;
+}
+div#dep-group-num i.fa-arrow-circle-left{
+    position: relative;
+    top: 2px;
+}
+div#dep-group-num div.header-slider-menu2-back:hover{
+    cursor: pointer !important;
+}
+
+
+
+div#prog-group-num{
+    position: absolute;
+    background-color: white;
+    width:100%  !important;
+    z-index: 7;
+    top: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    color: #232F3E;
+    text-align: center;
+    overflow: scroll;
+    left: 400px;
+    transition-property: left;
+    transition-duration: 1s;
+}
+div#prog-group-num div div{
+    background-color: white;
+    padding-left:30px;
+    margin-top: 10px;
+    line-height: 50px;
+    text-align: left;
+}
+div#prog-group-num div a div {
+    color: #232F3E;
+}
+div#prog-group-num i.fa-arrow-circle-left{
+    position: relative;
+    top: 2px;
+}
+div#prog-group-num div.header-slider-menu2-back:hover{
+    cursor: pointer !important;
 }

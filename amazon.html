@@ -78,7 +78,7 @@
                 </a>
             </div>
             <div class="header-bottom">
-                <div class="header-bottom-All">
+                <div class="header-bottom-All" onclick="headerSliderOpen()">
                     <i class="material-icons" style="font-size:38px;color:#ffffff">menu</i>
                     <p>All</p>
                 </div>
@@ -195,8 +195,806 @@
                 </div>
             </div>
         </div>
-        <div id="header-background-black-screen" onclick="locChooseClose()"></div>
-        <div id="body-background-black-screen" onclick="locChooseClose()"></div>
+        <div id="header-slider">
+            <div class="header-slider-container">
+                <a href="">
+                    <div class="header-slider-hello">
+                        <p>Hello , Sign in</p>
+                    </div>
+                </a>    
+                <div class="header-slider-dig">
+                    <div class="header-slider-dig-h2">
+                       <h2>Digital Content & Devices</h2>
+                    </div>
+                    <div onclick="menu2SliderOpenDig(0)">
+                        <p>dig product group 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenDig(1)">
+                        <p>dig product group 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenDig(2)">
+                        <p>dig product group 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="header-slider-dep">
+                    <div class="header-slider-dep-h2">
+                        <h2>Shop By Department</h2>
+                    </div>
+                    <div onclick="menu2SliderOpenDep(0)">
+                        <p>dep product group 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenDep(1)">
+                        <p>dep product group 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenDep(2)">
+                        <p>dep product group 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenDep(3)">
+                        <p>dep product group 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div class="header-slider-see header-slider-see-1">
+                        <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(4)">
+                            <p>see group 5 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(5)">
+                            <p>see group 6 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(6)">
+                            <p>see group 7 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(7)">
+                            <p>see group 8 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(8)">
+                            <p>see group 9 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                    </div>
+                    <div id="header-slider-dep-see-more">
+                        <p>See All <i class="fa fa-chevron-down dep-see-more-down" style="font-size:15px"></i></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="header-slider-prog">
+                    <div class="header-slider-prog-h2">
+                        <h2>Programs & Features</h>
+                    </div>
+                    <div onclick="menu2SliderOpenProg(0)">
+                        <p>prog product group 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenProg(1)">
+                        <p>prog product group 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenProg(2)">
+                        <p>prog product group 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div onclick="menu2SliderOpenProg(3)">
+                        <p>prog product group 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                    </div>
+                    <div class="header-slider-see header-slider-see-2">
+                        <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(4)">
+                            <p>see group 5 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(5)">
+                            <p>see group 6 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(6)">
+                            <p>see group 7 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(7)">
+                            <p>see group 8 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(8)">
+                            <p>see group 9 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                    </div>
+                    <div id="header-slider-prog-see-more">
+                        <p>See All <i class="fa fa-chevron-down prog-see-more-down" style="font-size:15px"></i></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="header-slider-help">
+                    <div class="header-slider-help-h2">
+                        <h2>Help & Settings</h2>
+                    </div>
+                    <div>
+                        <p>help product group 1</p>
+                    </div>
+                    <div>
+                        <p>help product group 2</p>
+                    </div>
+                    <div>
+                        <p>help product group 3</p>
+                    </div>
+                    <div>
+                        <p>help product group 4</p>
+                    </div>
+                    <div>
+                        <p>help product group 5</p>
+                    </div>
+                </div>
+            </div>
+                
+            <div id="dig-group-num" class="dig-menu-2 dig-group-1">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDigMenu2Back(0)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dig-h2">
+                            <h2>group 1 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dig-group-num" class="dig-menu-2 dig-group-2">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDigMenu2Back(1)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dig-h2">
+                            <h2>group 2 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="dig-group-num" class="dig-menu-2 dig-group-3">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDigMenu2Back(2)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dig-h2">
+                            <h2>group 3 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-1">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(0)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 1 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-2">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(1)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 2 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-3">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(2)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 3 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-4">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(3)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 4 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-5">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(4)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 5 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-6">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(5)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 6 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-7">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(6)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 7 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-8">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(7)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 8 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-9">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(8)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 9 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-1">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(0)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 1 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-2">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(1)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 2 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-3">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(2)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 3 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="prog-group-num" class="prog-menu-2 prog-group-4">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(3)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 4 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-5">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(4)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 5 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-6">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(5)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 6 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="prog-group-num" class="prog-menu-2 prog-group-7">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(6)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 7 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-8">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(7)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 8 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="prog-group-num" class="prog-menu-2 prog-group-9">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(8)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 9 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+        </div>
+        <div id="header-background-black-screen" onclick="locChooseClose(),headerSliderClose()"></div>
+        <div id="body-background-black-screen" onclick="locChooseClose(),headerSliderClose()"></div>
     </header>
     <main></main>
     <footer></footer>
