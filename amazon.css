@@ -65,6 +65,7 @@ div#header-container div.header-top div#header-top-deliver{
 }
 div#header-container div.header-top div#header-top-deliver:hover{
     box-shadow: 0 0 1px 2px #232F3E;
+    cursor: pointer;
 }
 div#header-container div.header-top div#header-top-deliver p:nth-child(1){
     font-size: 15px;
@@ -106,6 +107,11 @@ div#header-container div.header-top div#header-top-search div div.header-top-sea
     display: inline-block;
     right: 0px;
     padding-top: 8px;
+}
+div#header-container div.header-top div#header-top-search div div.header-top-search-submit:hover{
+    cursor: pointer;
+    background-color: #ff9710;
+
 }
 div#header-container div.header-top div#header-top-nation{
     /* flex-grow: 1; */
@@ -162,6 +168,11 @@ div#header-container div.header-top div#header-top-cart a{
 div#header-container div.header-top div#header-top-cart p{
     display: inline;
 }
+div#header-container div.header-top div#header-top-cart div#header-top-cart-counter{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
 
 
         /* end header top */
@@ -203,6 +214,7 @@ div#header-container div.header-bottom div.header-bottom-All{
 }
 div#header-container div.header-bottom div.header-bottom-All:hover{
     box-shadow: 0 0 1px 2px #ffffff;
+    cursor: pointer;
 }
 div#header-container div.header-bottom div.header-bottom-All p{
     display: inline;
@@ -270,6 +282,11 @@ div#loc-choose div.loc-choose-bott button{
     font-size: 13px;
     font-weight: bolder;
 }
+div#loc-choose div.loc-choose-bott button:hover{
+    background-color: #f0c400;
+    cursor: pointer;
+}
+
 div#loc-choose div.loc-choose-bott>button{
     width: 325px;
     margin-top: 15px;
@@ -312,6 +329,9 @@ div#loc-choose div.loc-choose-bott div#US-zip-code button{
     background-color: white;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.34);
 }
+div#loc-choose div.loc-choose-bott div#US-zip-code button:hover{
+    background-color: rgb(240, 240, 240);
+}
 div#loc-choose div.loc-choose-bott div#US-zip-code p.US-zip-code-error{
     color: red;
     font-size: 15px;
@@ -347,7 +367,11 @@ div#loc-choose div.loc-choose-bott select{
     margin-bottom: 10px;
     outline: 0.5px solid rgba(0, 0, 0, 0.34);
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.34);
+    background-color: rgb(240, 240, 240);
+}
+div#loc-choose div.loc-choose-bott select:hover{
     background-color: #E3E6E6;
+    cursor: pointer;
 }
 div#loc-choose div.loc-choose-bott button:last-child{
     width: 60px;
@@ -437,13 +461,17 @@ div#header-sign-in div.header-sign-in-top{
 div#header-sign-in div.header-sign-in-top div{
     width: 250px;
     height: 40px;
-    background-color: rgb(255, 196, 0);
-    margin: 0 auto;
+    background-image:linear-gradient(orange,rgb(255, 196, 0));
+    margin: 0 auto; 
     padding: 5px;
     border-radius: 5px;
     color: #232F3E;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.34);
     margin-bottom: 10px;
+}
+div#header-sign-in div.header-sign-in-top div:hover{
+    background-image:linear-gradient(rgb(237, 154, 0),rgb(244, 187, 0));
+    cursor: pointer;
 }
 div#header-sign-in div.header-sign-in-top p{
     display: inline;
@@ -497,6 +525,8 @@ div#header-sign-in div.header-sign-in-bott div.header-sign-in-bott-right a{
 }
         /* end header sign in */
 
+        /* start background screens style */
+
         
 div#body-background-black-screen{
     position: absolute;
@@ -517,7 +547,10 @@ div#header-background-black-screen{
     z-index: 4;
 }
 
+            /* end background screens style */
+
             /* start header slider */
+
 
 div#header-slider{
     width: 400px;
@@ -545,15 +578,21 @@ div#header-slider>div:not(div.header-slider-hello){
 }
 div#header-slider div.header-slider-hello{
     background-color: #253343;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bolder;
-    text-align: center;
+    text-align: left;
     height: 50px;
     color: white;
     padding: 7px;
     width: 400px;
     position: fixed;
     z-index: 6;
+    padding-left: 30px;
+    padding-bottom: 50px !important;
+}
+div#header-slider div.header-slider-hello i.material-icons{
+    position: relative;
+    top: 8px;
 }
 div#header-slider i.fa-chevron-right{
     position:absolute;
@@ -646,10 +685,10 @@ div#dig-group-num{
     background-color: white;
     width:100%  !important;
     z-index: 7;
-    top: 50px;
+    top: 57px;
     margin: 0 !important;
     padding: 0 !important;
-    height: 100%;
+    height: 92%;
     color: #232F3E;
     text-align: center;
     overflow: scroll;
@@ -684,10 +723,10 @@ div#dep-group-num{
     background-color: white;
     width:100%  !important;
     z-index: 7;
-    top: 50px;
+    top: 57px;
     margin: 0 !important;
     padding: 0 !important;
-    height: 100%;
+    height: 92%;
     color: #232F3E;
     text-align: center;
     overflow: scroll;
@@ -720,10 +759,10 @@ div#prog-group-num{
     background-color: white;
     width:100%  !important;
     z-index: 7;
-    top: 50px;
+    top: 57px;
     margin: 0 !important;
     padding: 0 !important;
-    height: 100%;
+    height: 92%;
     color: #232F3E;
     text-align: center;
     overflow: scroll;
@@ -748,3 +787,5 @@ div#prog-group-num i.fa-arrow-circle-left{
 div#prog-group-num div.header-slider-menu2-back:hover{
     cursor: pointer !important;
 }
+
+            /* end header slider menu 2 */
