@@ -8,9 +8,9 @@
 }
 
 body{
-  overflow-x: hidden;
-  text-align: center;
-  background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
 }
 div#header-container{
     text-align: center;
@@ -20,6 +20,9 @@ div#header-container{
     z-index: 3;
     position: relative;
 }
+
+
+            /* start header */
 
 
             /* header top start */
@@ -242,12 +245,12 @@ div#header-container div.header-bottom div.header-bottom-gift{
         /* start location choose */
 
 div#loc-choose{
-    position: relative;
-    top: 80px;
+    position: absolute;
+    top: 180px;
     width: 370px;
     /* padding: 20px 0; */
     background-color: white;
-    margin: 0 auto;
+    left: 35%;
     border-radius: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
@@ -789,3 +792,57 @@ div#prog-group-num div.header-slider-menu2-back:hover{
 }
 
             /* end header slider menu 2 */
+
+            /* end header */
+
+            /* start main */
+
+
+            /* start main slider */
+
+
+div#main-container div.main-slider div.main-slider-container{
+    display: inline-block;
+    width: 1536px;
+    position: relative;
+}
+div#main-container div.main-slider div.main-slider-container div.main-slider-container-slider{
+    position: relative;
+    width: 1536px;
+    overflow-x: hidden;
+}
+div#main-container div.main-slider div.main-slider-container div.main-slider-container-slider div.main-slider-images{
+    z-index:3;
+    position: relative;
+    width: 6144px;
+    transition-property: right;
+    transition-duration: .5s;
+}
+div#main-container div.main-slider div.main-slider-container div.main-slider-container-slider div.main-slider-images img{
+    float: left;
+    width: 1536px;
+    z-index:3;
+}
+div#main-container div.main-slider div.main-slider-container div.main-slider-move{
+    width: 80px;
+    height: 400px;
+    padding-top: 160px;
+    border-radius: 5px;
+    z-index:4;
+    position: absolute;
+    margin-top: 5px;
+}
+div#main-container div.main-slider div.main-slider-container div.main-slider-move:hover{
+    box-shadow: 0 0 1px 2px rgb(255, 255, 255);
+    cursor: pointer;
+}
+div#main-container div.main-slider div.main-slider-container div.main-slider-move-next{
+    right: 10px;
+}            
+div#main-container div.main-slider div.main-slider-container div.main-slider-move-back{
+    left: 10px;
+}            
+
+        /* end main slider */
+        /* start main rows */
+

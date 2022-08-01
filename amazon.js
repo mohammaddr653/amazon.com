@@ -144,3 +144,66 @@ function sliderProgMenu2Back(e){
     headerSliderProgGroupNum[e].style.left="400px";
     headerSliderContainer.style.overflow="scroll";
 }
+
+        //    start main slider
+
+const mainSliderContainerSlider=document.getElementsByClassName("main-slider-images")[0];
+mainSliderContainerSlider.style.right="0px";
+var mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
+var mainSliderNum =0;
+function mainSliderAuto(){
+    var mainSliderContainerSliderRight=mainSliderNum+1536+"px";
+    var mainSliderContainerSliderRightStr=String(mainSliderContainerSliderRight);
+    mainSliderContainerSlider.style.right=mainSliderContainerSliderRightStr;
+    if(mainSliderNum==4608){
+        mainSliderNum=0;
+        mainSliderContainerSlider.style.right="0px";
+    }
+    else{
+        mainSliderNum=mainSliderNum+1536;
+    }
+}
+function mainSliderMoveBack(){
+    clearInterval(mainSliderAutoInterval);
+    switch(mainSliderContainerSlider.style.right){
+        case "0px" :
+            mainSliderContainerSlider.style.right="4608px";
+            mainSliderNum=0;
+            break;
+        case "1536px":
+            mainSliderContainerSlider.style.right="0px";
+            mainSliderNum=0;
+            break;
+        case "3072px":
+            mainSliderContainerSlider.style.right="1536px";
+            mainSliderNum=1536;
+            break;
+        case "4608px":
+            mainSliderContainerSlider.style.right="3072px";
+            mainSliderNum=3072;
+            break;    
+    }
+    mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
+}
+function mainSliderMoveNext(){
+    clearInterval(mainSliderAutoInterval);
+    switch(mainSliderContainerSlider.style.right){
+        case "0px" :
+            mainSliderContainerSlider.style.right="1536px";
+            mainSliderNum=1536;
+            break;
+        case "1536px":
+            mainSliderContainerSlider.style.right="3072px";
+            mainSliderNum=3072;
+            break;
+        case "3072px":
+            mainSliderContainerSlider.style.right="4608px";
+            mainSliderNum=4608;
+            break;
+        case "4608px":
+            mainSliderContainerSlider.style.right="0px";
+            mainSliderNum=0;
+            break;    
+    }
+    mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
+}
