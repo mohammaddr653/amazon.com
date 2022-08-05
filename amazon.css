@@ -871,6 +871,7 @@ div#main-container div.main-rows div.main-row>div{
     width: 200px;
     height: 400px;
     background-color: #ffffff;
+    overflow: hidden;
     flex-grow: 1;
     /* border: 1px solid black; */
     margin: 0 10px;
@@ -952,6 +953,8 @@ div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(
 
                         /* end 4 window content */
 
+                        /* start 1 window content */
+
 div#main-container div.main-rows div.main-row>div.window1-content>div:nth-child(2){
     width: 100%;
     height: 70%;
@@ -972,3 +975,118 @@ div#main-container div.main-rows div.main-row>div.window1-content>div:nth-child(
 }
 
 
+                        /* end 1 window content */
+
+                        /* start row1-content4 */
+
+div#main-container div.main-rows div.main-row>div.signin-adds-content{
+    background-color: rgba(255, 255, 255, 0);
+}
+div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-content4-top:nth-child(1){
+    width: 100%;
+    height: 150px;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: white;
+}
+div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-content4-top:nth-child(1)>p{
+    display: block;
+    /* background-color: yellow; */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-content4-top:nth-child(1)>button{
+    background-color: #F7CA2E;
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bolder;
+    width: 300px;
+}
+div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-content4-top:nth-child(1)>button:hover{
+    background-color: #e7bf2c;
+    cursor: pointer;
+}
+div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-content4-bottom a img{
+    height:230px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+
+                        /* end row1-content4 */
+
+                        /* start row3 sliding-content */
+
+div#main-container div.main-rows div.main-row-3 div.sliding-content{
+    height: 320px;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main{
+    /* background-color: yellow; */
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div#row3-content-main-slider{
+    /* background-color: red; */
+    height: 100%;
+    position: absolute;
+    text-align: left;
+    /* width: 2000px; */
+    /* left: -5000px; */
+    left: 0;
+    transition-property: left;
+    transition-duration: .5s;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div#row3-content-main-slider img{
+    width: 170px;
+    margin-left: 5px;
+    height: 100%;
+    display: inline-block;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div.row3-content-main-move{
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.674);
+    padding-top: 20px;
+    top: 60px;
+    outline: 1px solid rgb(0, 162, 255);
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div.row3-content-main-move:hover{
+    background-color: white;
+    cursor: pointer;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div.row3-content-main-move-back{
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div.row3-content-main-move-next{
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+/* div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll{
+    background-color: red;
+    width: 100%;
+    position: relative;
+    top: 20px;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll span{
+    width: 300px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.451);
+    position: absolute;
+    left: 5px;
+    transition-property: height;
+    transition-duration: .1s;
+}
+div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll span:hover{
+    height: 8px;
+    cursor: pointer;
+} */

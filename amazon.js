@@ -207,3 +207,42 @@ function mainSliderMoveNext(){
     }
     mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
 }
+var mainRow=document.getElementsByClassName("main-row")[0];
+var row3ContentMainSlider = document.getElementById('row3-content-main-slider');
+var row3SliderImgNum = row3ContentMainSlider.getElementsByTagName('img').length;
+var row3ContentMainMoveNext = document.getElementsByClassName('row3-content-main-move-next')[0];
+var row3ContentMainMoveBack = document.getElementsByClassName('row3-content-main-move-back')[0];
+var row3ContentMainScrollSpan=document.querySelector('div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll span');
+var row3SliderMove=0;
+row3ContentMainMoveNext.addEventListener("click",row3ContentMainSliderNext);
+row3ContentMainMoveBack.addEventListener("click",row3ContentMainSliderBack);
+row3ContentMainSlider.style.width=(row3SliderImgNum*170)+(row3SliderImgNum*5)+((row3SliderImgNum-1)*4)+"px";
+if((row3SliderImgNum*170)+(row3SliderImgNum*5)<window.screen.width){
+    row3ContentMainMoveNext.style.display="none";
+}
+row3ContentMainMoveBack.style.display="none";
+function row3ContentMainSliderNext(){
+    row3ContentMainMoveNext.removeEventListener("click",row3ContentMainSliderNext);
+    row3SliderMove=row3SliderMove-window.screen.width+170;
+    var moveNums=((row3ContentMainSlider.offsetWidth)/(window.screen.width-170))-(((row3ContentMainSlider.offsetWidth)%(window.screen.width-170))/(window.screen.width-170));
+    if(-1*row3SliderMove==(moveNums)*(window.screen.width-170)){
+        var lastMove= (row3ContentMainSlider.offsetWidth)-(moveNums)*(window.screen.width-170);
+        row3ContentMainMoveNext.style.display="none";
+        row3ContentMainSlider.style.left=row3ContentMainSlider.offsetLeft-lastMove+"px";
+    }else{
+        row3ContentMainSlider.style.left=row3SliderMove+"px";
+    }
+    setTimeout(restartEvent,300);
+    function restartEvent(){
+        row3ContentMainMoveNext.addEventListener("click",row3ContentMainSliderNext);
+        row3ContentMainMoveBack.style.display="block";
+    }
+}
+function row3ContentMainSliderBack(){
+    row3SliderMove=row3SliderMove+window.screen.width-170;
+    row3ContentMainSlider.style.left=row3SliderMove+"px";
+    if(row3SliderMove==0){
+        row3ContentMainMoveBack.style.display="none";
+    }
+    row3ContentMainMoveNext.style.display="block";
+}
