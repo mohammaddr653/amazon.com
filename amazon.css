@@ -694,7 +694,7 @@ div#dig-group-num{
     height: 92%;
     color: #232F3E;
     text-align: center;
-    overflow: scroll;
+    overflow-y: scroll;
     left: 400px;
     transition-property: left;
     transition-duration: 1s;
@@ -732,7 +732,7 @@ div#dep-group-num{
     height: 92%;
     color: #232F3E;
     text-align: center;
-    overflow: scroll;
+    overflow-y: scroll;
     left: 400px;
     transition-property: left;
     transition-duration: 1s;
@@ -768,7 +768,7 @@ div#prog-group-num{
     height: 92%;
     color: #232F3E;
     text-align: center;
-    overflow: scroll;
+    overflow-y: scroll;
     left: 400px;
     transition-property: left;
     transition-duration: 1s;
@@ -954,6 +954,7 @@ div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(
                         /* end 4 window content */
 
                         /* start 1 window content */
+                        
 
 div#main-container div.main-rows div.main-row>div.window1-content>div:nth-child(2){
     width: 100%;
@@ -1021,23 +1022,20 @@ div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-c
 
                         /* start row3 sliding-content */
 
+
 div#main-container div.main-rows div.main-row-3 div.sliding-content{
     height: 320px;
 }
 div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main{
-    /* background-color: yellow; */
     height: 220px;
     overflow: hidden;
     position: relative;
 
 }
 div#main-container div.main-rows div.main-row>div.sliding-content div.row3-content-main div#row3-content-main-slider{
-    /* background-color: red; */
     height: 100%;
     position: absolute;
     text-align: left;
-    /* width: 2000px; */
-    /* left: -5000px; */
     left: 0;
     transition-property: left;
     transition-duration: .5s;
@@ -1070,23 +1068,16 @@ div#main-container div.main-rows div.main-row>div.sliding-content div.row3-conte
     right: 0;
     border-radius: 5px 0 0 5px;
 }
-/* div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll{
-    background-color: red;
+
+
+                            /* end row3 sliding-content */
+
+                            /* start main recommend-content */
+
+
+div#main-container div.main-recommend{
     width: 100%;
-    position: relative;
-    top: 20px;
+    background-color: red;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll span{
-    width: 300px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: rgba(128, 128, 128, 0.451);
-    position: absolute;
-    left: 5px;
-    transition-property: height;
-    transition-duration: .1s;
-}
-div#main-container div.main-rows div.main-row>div.sliding-content div#row3-content-main-scroll span:hover{
-    height: 8px;
-    cursor: pointer;
-} */
