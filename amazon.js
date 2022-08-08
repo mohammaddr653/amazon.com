@@ -31,24 +31,20 @@ function locChooseClose(){
 function nationChooseOpen(){
     nationChoose.style.display="block";
     BodyBlackBackGround.style.display="block";
-    // HeaderBlackBackGround.style.display="block";
 
 }
 function nationChooseClose(){
         nationChoose.style.display="none";
         BodyBlackBackGround.style.display="none";
-        // HeaderBlackBackGround.style.display="none";
 }
 function headerSignOpen(){
     headerSignIn.style.display="block";
     BodyBlackBackGround.style.display="block";
-    // HeaderBlackBackGround.style.display="block";
 
 }
 function headerSignClose(){
         headerSignIn.style.display="none";
         BodyBlackBackGround.style.display="none";
-        // HeaderBlackBackGround.style.display="none";
 }
 headerSliderDepSeeMore.addEventListener("click" , sliderSee1Open);
 headerSliderProgSeeMore.addEventListener("click" , sliderSee2Open);
@@ -207,6 +203,13 @@ function mainSliderMoveNext(){
     }
     mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
 }
+
+
+                 //    end main slider
+
+
+                // start row 3 sliding content
+
 var mainRow=document.getElementsByClassName("main-row")[0];
 var row3ContentMainSlider = document.getElementById('row3-content-main-slider');
 var row3SliderImgNum = row3ContentMainSlider.getElementsByTagName('img').length;
@@ -246,3 +249,71 @@ function row3ContentMainSliderBack(){
     }
     row3ContentMainMoveNext.style.display="block";
 }
+
+
+                    // end row 3 sliding content
+
+                    // start recommend slider
+
+
+var recommendMainSlide = document.getElementsByClassName('recommend-main-slide');
+var recommendCounterNow = document.getElementsByClassName('counter-now')[0];
+var recommendSlideOpen;
+var recommendNewSlide;
+for(var n=0;n<=6;n++){
+    recommendMainSlide[n].style.display="none";
+}
+recommendMainSlide[0].style.display="flex";
+recommendCounterNow.innerHTML=1;
+function recommendSlideBack(){
+    for(var x=0;x<=6;x++){
+        if(recommendMainSlide[x].style.display=="flex"){
+            recommendSlideOpen=recommendMainSlide[x];
+            if(x==0){
+                recommendNewSlide=recommendMainSlide[6];
+            }else{
+                recommendNewSlide=recommendMainSlide[x-1];
+            }
+            recommendSlideOpen.classList.add("closing-slide-from-left");
+            setTimeout(showBackSlide,100);
+            function showBackSlide(){
+                recommendSlideOpen.style.display="none";
+                recommendNewSlide.style.display="flex";
+                recommendSlideOpen.classList.remove("closing-slide-from-left");
+                if(recommendCounterNow.innerHTML==1){
+                    recommendCounterNow.innerHTML=7;
+                }else{
+                    recommendCounterNow.innerHTML-=1;
+                }
+            }
+
+        }
+    }
+}
+function recommendSlideNext(){
+    for(var x=0;x<=6;x++){
+        if(recommendMainSlide[x].style.display=="flex"){
+            recommendSlideOpen=recommendMainSlide[x];
+            if(x==6){
+                recommendNewSlide=recommendMainSlide[0];
+            }else{
+                recommendNewSlide=recommendMainSlide[x+1];
+            }
+            recommendSlideOpen.classList.add("closing-slide-from-right");
+            setTimeout(showBackSlide,100);
+            function showBackSlide(){
+                recommendSlideOpen.style.display="none";
+                recommendNewSlide.style.display="flex";
+                recommendSlideOpen.classList.remove("closing-slide-from-right");
+                if(recommendCounterNow.innerHTML==7){
+                    recommendCounterNow.innerHTML=1;
+                }else{
+                    recommendCounterNow.innerHTML++;
+                }
+            }
+
+        }
+    }
+}
+
+                        // end recommend slider

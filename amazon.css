@@ -12,10 +12,12 @@ body{
     text-align: center;
     background-color: #EAEDED;
 }
+body a{
+    color: #232F3E;
+}
 div#header-container{
     text-align: center;
     margin: 0 auto;
-    /* background-color: aqua; */
     width: 100vw;
     z-index: 5;
     position: relative;
@@ -36,7 +38,6 @@ div#header-container div.header-top{
     padding-left: 5px;
 }
 div#header-container div.header-top div{
-    /* display: inline-block; */
     padding:0px 5px ;
     background-color: rgb(246, 246, 246);
     font-size: 15px;
@@ -48,16 +49,12 @@ div#header-container div.header-top a{
 div#header-container div.header-top a:hover{
     box-shadow: 0 0 1px 2px #232F3E;
 }
-/* div#header-container div.header-top div#header-top-logo{
-    
-} */
 div#header-container div.header-top div#header-top-logo img{
     width: 120px;
     padding-top: 15px;
 }
 div#header-container div.header-top div#header-top-deliver{
     background-color: rgb(246, 246, 246);
-    /* flex-grow: 1; */
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
     padding-top: 10px;
@@ -117,7 +114,6 @@ div#header-container div.header-top div#header-top-search div div.header-top-sea
 
 }
 div#header-container div.header-top div#header-top-nation{
-    /* flex-grow: 1; */
     background-color: rgb(246, 246, 246);
     padding-top: 25px;
 }
@@ -127,7 +123,6 @@ div#header-container div.header-top div#header-top-nation div.header-top-nation-
 }
 div#header-container div.header-top div#heador-top-sign{
     background-color: rgb(246, 246, 246);
-    /* flex-grow: 1; */
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: left;
@@ -143,7 +138,6 @@ div#header-container div.header-top div#heador-top-sign p:nth-child(1){
 }
 div#header-container div.header-top div#heador-top-orders{
     background-color: rgb(246, 246, 246);
-    /* flex-grow: 1; */
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: left;
@@ -157,7 +151,6 @@ div#header-container div.header-top div#heador-top-orders p:nth-child(1){
 }
 div#header-container div.header-top div#header-top-cart{
     background-color: rgb(246, 246, 246);
-    /* flex-grow: 1; */
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: left;
@@ -248,7 +241,6 @@ div#loc-choose{
     position: absolute;
     top: 180px;
     width: 370px;
-    /* padding: 20px 0; */
     background-color: white;
     left: 35%;
     border-radius: 10px;
@@ -577,7 +569,6 @@ div#header-slider div.header-slider-container{
 }
 div#header-slider>div:not(div.header-slider-hello){
     text-align: left;
-    /* padding: 0 0px; */
 }
 div#header-slider div.header-slider-hello{
     background-color: #253343;
@@ -672,7 +663,6 @@ div#header-slider div.header-slider-see{
     position: relative;
 }
 div#header-slider div.header-slider-dep:hover div.header-slider-see{
-    /* height: 300px !important; */
     transition-duration: 1s;
 }
 div#header-slider div.header-slider-prog:hover div.header-slider-see{
@@ -853,9 +843,9 @@ div#main-container div.main-rows{
     width: 1536px;
     padding: 20px 10px;
     position: relative;
-    top: -380px;
     z-index: 3;
     margin: 0 auto;
+    margin-top: -380px;
     background-image: linear-gradient(rgba(212, 71, 71, 0) 10%,#eaeded8b 15%,#EAEDED 20%);
 }
 div#main-container div.main-rows div.main-row{
@@ -873,14 +863,12 @@ div#main-container div.main-rows div.main-row>div{
     background-color: #ffffff;
     overflow: hidden;
     flex-grow: 1;
-    /* border: 1px solid black; */
     margin: 0 10px;
     display: inline-block;
     position: relative;
 }
             
 div#main-container div.main-rows div.main-row>div>div:nth-child(1){
-    /* background-color: red; */
     padding: 15px 15px;
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
@@ -898,7 +886,6 @@ div#main-container div.main-rows div.main-row>div>div:nth-child(3) a{
     height: 40px;
     display: inline-block;
     color: #232F3E;
-    /* background-color: yellow; */
 }
 div#main-container div.main-rows div.main-row>div>div:nth-child(3):hover a{
     color: #ff6600;
@@ -912,19 +899,14 @@ div#main-container div.main-rows div.main-row>div>div:nth-child(3):hover a{
 div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(2){
     width: 100%;
     height: 70%;
-    /* background-color: yellow; */
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     padding: 0 5px;
-    /* padding: 0 !important;
-    margin: 0 !important; */
 }
 div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(2)>div{
     flex-grow: 1;
     padding: 0;
-    /* margin: 0 !important; */
-    /* background-color: grey; */
     width: 150px;
     margin: 5px;
     height: 130px;
@@ -940,7 +922,6 @@ div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(
 div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(2)>div div{
     text-align: left;
     width: 100%;
-    /* background-color: red; */
     height: 20px;
     margin: 0;
     padding: 0 5px;
@@ -959,7 +940,6 @@ div#main-container div.main-rows div.main-row>div.window4-content>div:nth-child(
 div#main-container div.main-rows div.main-row>div.window1-content>div:nth-child(2){
     width: 100%;
     height: 70%;
-    /* background-color: red; */
     padding: 0 15px !important;
     margin: 0 !important;
 }
@@ -992,7 +972,6 @@ div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-c
 }
 div#main-container div.main-rows div.main-row>div.signin-adds-content>div.row1-content4-top:nth-child(1)>p{
     display: block;
-    /* background-color: yellow; */
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -1077,7 +1056,128 @@ div#main-container div.main-rows div.main-row>div.sliding-content div.row3-conte
 
 div#main-container div.main-recommend{
     width: 100%;
-    background-color: red;
+    background-color: white;
     margin: 0 !important;
     padding: 0 !important;
 }
+div#main-container div.main-recommend div.main-recommend-content{
+    min-width: 1000px;
+    position: relative;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-header{
+    padding: 20px 40px;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-header div.recommend-header-counter{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 15px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main{
+    margin: 0 100px;
+    overflow: hidden;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main div.recommend-move{
+    position: absolute;
+    width: 50px;
+    padding-top:8px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    color: grey;
+    top: 200px;
+    cursor: pointer;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main div.recommend-move-back{
+    left: 30px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main div.recommend-move-next{
+    right: 30px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide{
+    position: relative;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+div#main-container div.main-recommend div.main-recommend-content div.closing-slide-from-left{
+    animation-name: closing-slide-from-left;
+    animation-duration: .1s;
+}
+div#main-container div.main-recommend div.main-recommend-content div.closing-slide-from-right{
+    animation-name: closing-slide-from-right;
+    animation-duration: .1s;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container{
+    flex-grow: 1;
+    margin: 0 5px;
+    width: 100px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container div.slide-container-name{
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container div.slide-container-stars{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    text-align: left;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container div.slide-container-stars a p span{
+    background-color: rgb(255, 94, 0);
+    color: white;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container div.slide-container-price{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-footer{
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.199);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-footer p:nth-child(1){
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-footer button{
+    background-image:linear-gradient(orange,rgb(255, 196, 0));
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    padding: 5px 0;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-footer p:nth-child(3){
+    font-size: 13px;
+}
+div#main-container div.main-recommend div.main-recommend-content div.recommend-footer p:nth-child(3) a:hover{
+    color: rgb(194, 71, 0);
+}
+@keyframes closing-slide-from-left{
+    0% {left: 0;}
+  100% {left: 100vw;}
+}
+@keyframes closing-slide-from-right{
+    0% {right: 0;}
+  100% {right: 100vw;}
+}
+
+
+                            /* end main recommend-content */
+
+                            /* end main rows */
+
+                            /* end main */
