@@ -15,6 +15,7 @@ const headerSliderDepGroupNum= document.getElementsByClassName("dep-menu-2");
 const headerSliderProgGroupNum= document.getElementsByClassName("prog-menu-2");
 const headerSliderMenu2Back= document.getElementById("header-slider-dig-h2");
 const headerSliderContainer= document.getElementsByClassName("header-slider-container")[0];
+const body=document.getElementsByTagName("body")[0];
 function locChooseOpen(){
     locChoose.style.display="block";
     BodyBlackBackGround.style.display="block";
@@ -34,8 +35,8 @@ function nationChooseOpen(){
 
 }
 function nationChooseClose(){
-        nationChoose.style.display="none";
-        BodyBlackBackGround.style.display="none";
+    nationChoose.style.display="none";
+    BodyBlackBackGround.style.display="none";
 }
 function headerSignOpen(){
     headerSignIn.style.display="block";
@@ -43,8 +44,8 @@ function headerSignOpen(){
 
 }
 function headerSignClose(){
-        headerSignIn.style.display="none";
-        BodyBlackBackGround.style.display="none";
+    headerSignIn.style.display="none";
+    BodyBlackBackGround.style.display="none";
 }
 headerSliderDepSeeMore.addEventListener("click" , sliderSee1Open);
 headerSliderProgSeeMore.addEventListener("click" , sliderSee2Open);
@@ -74,14 +75,17 @@ function sliderSee2Close(){
 }
 headerSlider.style.left="-400px";
 function headerSliderOpen(){
+    // alert(body.style.backgroundColor);
     headerSlider.style.left="0";
     BodyBlackBackGround.style.display="block";
     HeaderBlackBackGround.style.display="block";
+    body.style.overflowY="hidden";
 }
 function headerSliderClose(){
     headerSlider.style.left="-400px";
     BodyBlackBackGround.style.display="none";
     HeaderBlackBackGround.style.display="none";
+    body.style.overflowY="scroll";
     setTimeout(neatHeaderSlider,1000);
     function neatHeaderSlider(){
         for (e=0;e<=2;e++){
@@ -317,3 +321,34 @@ function recommendSlideNext(){
 }
 
                         // end recommend slider
+
+
+                        // start nation choose1
+
+var nationChoose1 = document.getElementById('nation-choose1');
+function nationChoose1Open(){
+    nationChoose1.style.display="block";
+}
+function nationChoose1Close(){
+    nationChoose1.style.display="none";
+}
+
+
+                        // end nation choose1
+
+                        // start smooth slide to top
+
+
+function winBacktoTop(){
+    var currentWinTop=document.documentElement.scrollTop;
+    var scroll= setInterval(scrollTop,1);
+    function scrollTop(){
+        window.scrollTo(0,currentWinTop-=30);
+        if(currentWinTop<1){
+            clearInterval(scroll);
+        }
+    }
+}
+
+
+                        // end smooth slide to top
