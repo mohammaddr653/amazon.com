@@ -20,32 +20,35 @@ function locChooseOpen(){
     locChoose.style.display="block";
     BodyBlackBackGround.style.display="block";
     HeaderBlackBackGround.style.display="block";
-
+    body.style.overflowY="hidden";
 }
 function locChooseClose(){
     if(locChoose.style.display="block"){
         locChoose.style.display="none";
         BodyBlackBackGround.style.display="none";
         HeaderBlackBackGround.style.display="none";
+        body.style.overflowY="scroll";
     }
 }
 function nationChooseOpen(){
     nationChoose.style.display="block";
     BodyBlackBackGround.style.display="block";
-
+    body.style.overflowY="hidden";
 }
 function nationChooseClose(){
     nationChoose.style.display="none";
     BodyBlackBackGround.style.display="none";
+    body.style.overflowY="scroll";
 }
 function headerSignOpen(){
     headerSignIn.style.display="block";
     BodyBlackBackGround.style.display="block";
-
+    body.style.overflowY="hidden";
 }
 function headerSignClose(){
     headerSignIn.style.display="none";
     BodyBlackBackGround.style.display="none";
+    body.style.overflowY="scroll";
 }
 headerSliderDepSeeMore.addEventListener("click" , sliderSee1Open);
 headerSliderProgSeeMore.addEventListener("click" , sliderSee2Open);
@@ -146,7 +149,7 @@ function sliderProgMenu2Back(e){
 }
 
         //    start main slider
-
+const mainSlider= document.getElementsByClassName("main-slider")[0];       
 const mainSliderContainerSlider=document.getElementsByClassName("main-slider-images")[0];
 mainSliderContainerSlider.style.right="0px";
 var mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
@@ -164,7 +167,6 @@ function mainSliderAuto(){
     }
 }
 function mainSliderMoveBack(){
-    clearInterval(mainSliderAutoInterval);
     switch(mainSliderContainerSlider.style.right){
         case "0px" :
             mainSliderContainerSlider.style.right="4608px";
@@ -183,10 +185,8 @@ function mainSliderMoveBack(){
             mainSliderNum=3072;
             break;    
     }
-    mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
 }
 function mainSliderMoveNext(){
-    clearInterval(mainSliderAutoInterval);
     switch(mainSliderContainerSlider.style.right){
         case "0px" :
             mainSliderContainerSlider.style.right="1536px";
@@ -205,6 +205,13 @@ function mainSliderMoveNext(){
             mainSliderNum=0;
             break;    
     }
+}
+mainSlider.addEventListener('mouseenter',pauseMainSlider);
+mainSlider.addEventListener('mouseleave',resumeMainSlider);
+function pauseMainSlider(){
+    clearInterval(mainSliderAutoInterval);
+}
+function resumeMainSlider(){
     mainSliderAutoInterval=setInterval(mainSliderAuto,3000);
 }
 

@@ -37,6 +37,7 @@ div#header-container div.header-top{
     flex-direction: row;
     justify-content: flex-start;
     padding-left: 5px;
+    padding-right: 20px;
 }
 div#header-container div.header-top div{
     padding:0px 5px ;
@@ -243,7 +244,10 @@ div#loc-choose{
     top: 180px;
     width: 370px;
     background-color: white;
-    left: 35%;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
     border-radius: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
@@ -1121,6 +1125,9 @@ div#main-container div.main-recommend div.main-recommend-content div.recommend-m
     margin: 0 5px;
     width: 100px;
 }
+div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container>div{
+    margin-bottom: 5px;
+}
 div#main-container div.main-recommend div.main-recommend-content div.recommend-main-slide>div.slide-container div.slide-container-name{
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
@@ -1233,7 +1240,7 @@ div#footer-container div.footer-top div.footer-top-main>div>p>a{
     color: white;
 }
 div#footer-container div.footer-top div.footer-top-main>div>p>a:hover{
-    color: rgba(255, 255, 255, 0.667);
+    text-decoration: underline;
 }
 div#footer-container div.footer-top div.footer-top-foot{
     background-color: white;
@@ -1348,7 +1355,7 @@ div#footer-container div.footer-bottom>div.footer-bottom-main>div>div>a{
     color: whitesmoke;
 }
 div#footer-container div.footer-bottom>div.footer-bottom-main>div>div>a:hover{
-    color: rgba(245, 245, 245, 0.744);
+    text-decoration: underline;
 }
 div#footer-container div.footer-bottom>div.footer-bottom-main>div>div>a>h5{
     font-weight: lighter;
@@ -1358,14 +1365,12 @@ div#footer-container div.footer-bottom>div.footer-bottom-main>div>div>a>p{
     color: rgba(220, 220, 220, 0.568);
     font-size: 13px;
 }
-div#footer-container div.footer-bottom>div.footer-bottom-main>div>div>a:hover>p{
-    color: rgba(245, 245, 245, 0.262);
-}
 div#footer-container div.footer-bottom>div.footer-bottom-foot{
     color: whitesmoke;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 30px 0;
     padding-top: 0;
+    font-size: 13px;
 }
 div#footer-container div.footer-bottom>div.footer-bottom-foot>a{
     color: rgba(245, 245, 245, 0.86);
@@ -1374,6 +1379,7 @@ div#footer-container div.footer-bottom>div.footer-bottom-foot>a{
 }
 div#footer-container div.footer-bottom>div.footer-bottom-foot>a:hover{
     color: rgba(245, 245, 245, 0.615);
+    text-decoration: underline;
 }
 div#footer-container div.footer-bottom>div.footer-bottom-foot>p{
     display: inline;
