@@ -398,7 +398,7 @@ div#nation-choose{
     display: none;
     position: absolute;
     z-index: 6;
-    left: 65vw;
+    /* left: 65vw; */
     top: 60px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
 }
@@ -449,7 +449,7 @@ div#header-sign-in{
     display: none;
     position: absolute;
     z-index: 6;
-    left: 60vw;
+    /* left: 60vw; */
     top: 60px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.534);
 }

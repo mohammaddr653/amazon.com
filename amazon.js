@@ -1,5 +1,7 @@
 const locChoose = document.getElementById('loc-choose');
+const headerTopNation = document.getElementById('header-top-nation');
 const nationChoose = document.getElementById('nation-choose');
+const headorTopSign = document.getElementById('heador-top-sign');
 const headerSignIn = document.getElementById('header-sign-in');
 const BodyBlackBackGround= document.getElementById('body-background-black-screen');
 const HeaderBlackBackGround= document.getElementById('header-background-black-screen');
@@ -34,6 +36,7 @@ function nationChooseOpen(){
     nationChoose.style.display="block";
     BodyBlackBackGround.style.display="block";
     body.style.overflowY="hidden";
+    nationChoose.style.left= headerTopNation.offsetLeft-150 +'px';
 }
 function nationChooseClose(){
     nationChoose.style.display="none";
@@ -44,6 +47,7 @@ function headerSignOpen(){
     headerSignIn.style.display="block";
     BodyBlackBackGround.style.display="block";
     body.style.overflowY="hidden";
+    headerSignIn.style.left= headorTopSign.offsetLeft-300 +'px';
 }
 function headerSignClose(){
     headerSignIn.style.display="none";
@@ -332,9 +336,12 @@ function recommendSlideNext(){
 
                         // start nation choose1
 
+
+var footerNationChoose1 = document.getElementById('footer-nation-choose1');
 var nationChoose1 = document.getElementById('nation-choose1');
 function nationChoose1Open(){
     nationChoose1.style.display="block";
+    nationChoose1.style.left= footerNationChoose1.offsetLeft-100 +'px';
 }
 function nationChoose1Close(){
     nationChoose1.style.display="none";
