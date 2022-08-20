@@ -847,11 +847,106 @@ div#main-container div.store-container div#store-right div.store-right-main{
 div#main-container div.store-container div#store-right div.store-right-main>div{
     background-color: red;
     display: flex;
+    /* padding: 20px; */
+    flex-wrap: wrap;
+}
+
+
+                /* start prod store card */
+
+
+
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card{
+    background-color: papayawhip;
+    width: 200px;
+    flex-direction: row;
+    width: 24%;
+    margin: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0px 0px .1px 1px rgb(233, 233, 233);
+    position: relative;
+    overflow: hidden;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best{
+    position: absolute;
+    background-color: white;
+    width: auto;
+    color: white;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best>p{
+    display: inline-block;
+    padding: 5px;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best>p:nth-child(1){
+    background-color: rgb(255, 106, 0);
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best>p:nth-child(2){
+    margin-left: 5;
+    display: none;
+    color: black;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best:hover>p:nth-child(2){
+    display: inline-block;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top a img{
+    width: 100%;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom{
+    padding: 10px;
+    background-color: rgb(255, 183, 0);
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div{
+    margin-bottom: 10px;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-rate>a{
+    display: inline-block;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-rate>a:nth-child(1)>i{
+    color: orange;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-price>a>p{
+    display: inline;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-price p.price-percent{
+    color: red;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-price p.now-price{
+    font-weight: bolder;
+    font-size: 20px;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-price p.old-price{
+    text-decoration:line-through;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-about{
+    font-weight: lighter;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-about i{
+    color: #00a6ff;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-about>div a{
+    color: #00a6ff;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery{
+    background-color: red;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery>a>img{
+    width: 30px;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery>a:last-child{
+    background-color: yellow;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 22px;
+    border-radius: 5px;
 }
 
 
 
-
+                        /* end prod store card */
 
 
 
