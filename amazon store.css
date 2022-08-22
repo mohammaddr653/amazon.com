@@ -11,7 +11,7 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
     text-align: center;
-    background-color: #EAEDED;
+    background-color: white;
 }
 body a{
     color: #232F3E;
@@ -793,27 +793,36 @@ div#prog-group-num div.header-slider-menu2-back:hover{
             /* start amazon main */
 
 
-div#main-container{
+/* div#main-container{
     background-color: yellow;
-}
+} */
 div#main-container div.store-container{
-    background-color: #1e75de;
+    /* background-color: #1e75de; */
     text-align: center;
     margin: 0 auto;
-    width: 1530px;
+    max-width: 1530px;
+    min-width: 1000px;
 }
 div#main-container div.store-container div#store-top{
-    background-color: red;
+    /* background-color: red; */
     padding: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     position: relative;
     width: 100%;
+    border-bottom: 1px solid rgb(198, 198, 198);
 }
 div#main-container div.store-container div#store-top>div.store-top-select{
     right: 0;
     position: absolute;
     margin-right: 50px;
+}
+div#main-container div.store-container div#store-top>div.store-top-select select{
+    background-color: #00a6ff;
+    outline: none;
+    border-radius: 5px;
+    /* padding-left: 100px; */
+    text-align: right;
 }
 div#main-container div.store-container>div{
     text-align: left;
@@ -825,30 +834,33 @@ div#main-container div.store-container>div>div{
 
 
 
-
+            /* start store right */
 
 
 
 div#main-container div.store-container div#store-right{
-    background-color: orange;
+    background-color: white;
     width: 79%;
 }
 div#main-container div.store-container div#store-right div.store-right-head{
     width: 100%;
-    background-color: plum;
+    /* background-color: plum; */
     padding: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     font-weight: bolder;
 }
-div#main-container div.store-container div#store-right div.store-right-main{
+/* div#main-container div.store-container div#store-right div.store-right-main{
     background-color: rgb(0, 242, 255);
-}
+} */
 div#main-container div.store-container div#store-right div.store-right-main>div{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     /* padding: 20px; */
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+
 }
 
 
@@ -857,11 +869,12 @@ div#main-container div.store-container div#store-right div.store-right-main>div{
 
 
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card{
-    background-color: papayawhip;
+    /* background-color: papayawhip; */
     width: 200px;
     flex-direction: row;
     width: 24%;
     margin: 5px;
+    flex-grow: 1;
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 0px 0px .1px 1px rgb(233, 233, 233);
     position: relative;
@@ -870,12 +883,16 @@ div#main-container div.store-container div#store-right div.store-right-main>div 
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best{
     position: absolute;
     background-color: white;
-    width: auto;
     color: white;
+    width: auto;
+    /* height: 17px; */
+    overflow: hidden;
+    font-size: 15px;
 }
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best>p{
     display: inline-block;
     padding: 5px;
+    /* position: absolute; */
 }
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best>p:nth-child(1){
     background-color: rgb(255, 106, 0);
@@ -885,15 +902,19 @@ div#main-container div.store-container div#store-right div.store-right-main>div 
     display: none;
     color: black;
 }
+div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best:hover{
+    width: 100%;
+}
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top div.card-top-best:hover>p:nth-child(2){
     display: inline-block;
 }
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-top a img{
+    padding: 15px;
     width: 100%;
 }
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom{
     padding: 10px;
-    background-color: rgb(255, 183, 0);
+    /* background-color: rgb(255, 183, 0); */
 }
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div{
     margin-bottom: 10px;
@@ -926,14 +947,14 @@ div#main-container div.store-container div#store-right div.store-right-main>div 
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-about>div a{
     color: #00a6ff;
 }
-div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery{
+/* div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery{
     background-color: red;
-}
+} */
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery>a>img{
     width: 30px;
 }
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card div.card-bottom>div.prod-color-gallery>a:last-child{
-    background-color: yellow;
+    /* background-color: yellow; */
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -949,14 +970,87 @@ div#main-container div.store-container div#store-right div.store-right-main>div 
                         /* end prod store card */
 
 
+                        /* end store right */
+
+
+
+                        /* start store left */
+
 
 
 div#main-container div.store-container div#store-left{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     width: 20%;
 }
+div#main-container div.store-container div#store-left>div{
+    margin: 10px 0;
+    /* background-color: rgb(250, 143, 143); */
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 20px;
+}
+div#main-container div.store-container div#store-left>div li:hover{
+    color: rgb(255, 123, 0);
+    cursor: pointer;
+}
+div#main-container div.store-container div#store-left>div:nth-child(1){
+    margin-top: 20px;
+}
+div#main-container div.store-container div#store-left>div>p:nth-child(1){
+    margin-bottom: 6px;
+    font-weight: bolder;
+}
+div#main-container div.store-container div#store-left>div#store-review ul li span{
+    font-size: 14px;
+}
+div#main-container div.store-container div#store-left>div#store-review ul li i{
+    color: orange;
+}
+div#main-container div.store-container div#store-left>div#store-price>span{
+    position: absolute;
+    left: 5px;
+}
+div#main-container div.store-container div#store-left>div#store-price>input.store-price-input{
+    display: inline-block;
+    width: 50px;
+    outline: none;
+    border: 1px solid rgb(124, 124, 124);
+    margin: 10px 2px;
+    height: 30px;
+    /* padding-left: 10px; */
+    border-radius: 3px;
+    text-align: center;
+}
+div#main-container div.store-container div#store-left>div#store-price>input.store-price-input:focus{
+    border: none;
+    box-shadow: 0 0 2px 1px rgb(0, 183, 255);
+}
+div#main-container div.store-container div#store-left>div#store-price>input.store-price-submit{
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid rgb(124, 124, 124);
+    background-color: white;
+    margin-left: 5px;
+}
+div#main-container div.store-container div#store-left>div#store-price>input.store-price-submit:hover{
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
+div#main-container div.store-container div#store-left>div#store-color>div>span{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    /* background-color: #00a6ff; */
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-
+/* div#main-container div.store-container div#store-left>div>ul>li.store-left-input-in>input{
+    color: red;
+    width: 500px;
+} */
 
 
 

@@ -151,6 +151,27 @@ function sliderProgMenu2Back(e){
     headerSliderContainer.style.overflow="scroll";
 }
 
+
+                    // start store left
+
+
+
+// var inputInStoreLeft = document.querySelectorAll("div#main-container div.store-container div#store-left>div>ul>li.store-left-input-in>input");
+function inputInCheck(e){
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+    if(target.getElementsByTagName('input')[0].checked){
+        target.getElementsByTagName('input')[0].checked=false;
+    }else{
+        target.getElementsByTagName('input')[0].checked=true;
+    }
+}
+
+
+                    // end store left
+
+
+
                     // start recommend slider
 
 
