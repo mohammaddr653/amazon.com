@@ -567,10 +567,10 @@ div#header-slider{
     transition-duration: 1s;
     overflow: hidden;
 }
-div#header-slider div.header-slider-container{
-    height: 100vh;
-    position: relative;
+div#header-slider div.header-slider-container>div{
     overflow: scroll;
+    position: relative;
+    height: 95vh;
 }
 div#header-slider>div:not(div.header-slider-hello){
     text-align: left;
@@ -580,11 +580,12 @@ div#header-slider div.header-slider-hello{
     font-size: 22px;
     font-weight: bolder;
     text-align: left;
-    height: 50px;
+    height: 5vh;
     color: white;
     padding: 7px;
     width: 400px;
-    position: fixed;
+    /* position: fixed; */
+    display: block;
     z-index: 6;
     padding-left: 30px;
     padding-bottom: 50px !important;
@@ -701,6 +702,10 @@ div#dig-group-num div div{
     line-height: 50px;
     text-align: left;
 }
+div#dig-group-num div div:hover{
+    background-color: #232f3e32;
+    cursor: pointer;
+}
 div#dig-group-num div a div {
     color: #232F3E;
 }
@@ -739,6 +744,11 @@ div#dep-group-num div div{
     line-height: 50px;
     text-align: left;
 }
+div#dep-group-num div div:hover{
+    background-color: #232f3e32;
+    cursor: pointer;
+}
+
 div#dep-group-num div a div {
     color: #232F3E;
 }
@@ -774,6 +784,10 @@ div#prog-group-num div div{
     margin-top: 10px;
     line-height: 50px;
     text-align: left;
+}
+div#dep-group-num div div:hover{
+    background-color: #232f3e32;
+    cursor: pointer;
 }
 div#prog-group-num div a div {
     color: #232F3E;

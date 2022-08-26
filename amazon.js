@@ -16,7 +16,7 @@ const headerSliderDigGroupNum= document.getElementsByClassName("dig-menu-2");
 const headerSliderDepGroupNum= document.getElementsByClassName("dep-menu-2");
 const headerSliderProgGroupNum= document.getElementsByClassName("prog-menu-2");
 const headerSliderMenu2Back= document.getElementById("header-slider-dig-h2");
-const headerSliderContainer= document.getElementsByClassName("header-slider-container")[0];
+const headerSliderContainerDiv= document.getElementsByClassName("header-slider-container-div")[0];
 const body=document.getElementsByTagName("body")[0];
 function locChooseOpen(){
     locChoose.style.display="block";
@@ -101,7 +101,7 @@ function headerSliderClose(){
                     break;
                 case "0px":
                     headerSliderDigGroupNum[e].style.left="400px";
-                    headerSliderContainer.style.overflow="scroll";
+                    headerSliderContainerDiv.style.overflow="scroll";
             }
         }
         for (e=0;e<=8;e++){
@@ -110,7 +110,7 @@ function headerSliderClose(){
                     break;
                 case "0px":
                     headerSliderDepGroupNum[e].style.left="400px";
-                    headerSliderContainer.style.overflow="scroll";
+                    headerSliderContainerDiv.style.overflow="scroll";
             }
         }
         for (e=0;e<=8;e++){
@@ -119,7 +119,7 @@ function headerSliderClose(){
                     break;
                 case "0px":
                     headerSliderProgGroupNum[e].style.left="400px";
-                    headerSliderContainer.style.overflow="scroll";
+                    headerSliderContainerDiv.style.overflow="scroll";
             }
         }
         sliderSee1Close();
@@ -129,27 +129,27 @@ function headerSliderClose(){
 }
 function menu2SliderOpenDig(e){
     headerSliderDigGroupNum[e].style.left="0";
-    headerSliderContainer.style.overflow="hidden";
+    headerSliderContainerDiv.style.overflow="hidden";
 }
 function menu2SliderOpenDep(e){
     headerSliderDepGroupNum[e].style.left="0";
-    headerSliderContainer.style.overflow="hidden";
+    headerSliderContainerDiv.style.overflow="hidden";
 }
 function menu2SliderOpenProg(e){
     headerSliderProgGroupNum[e].style.left="0";
-    headerSliderContainer.style.overflow="hidden";
+    headerSliderContainerDiv.style.overflow="hidden";
 }
 function sliderDigMenu2Back(e){
     headerSliderDigGroupNum[e].style.left="400px";
-    headerSliderContainer.style.overflow="scroll";
+    headerSliderContainerDiv.style.overflow="scroll";
 }
 function sliderDepMenu2Back(e){
     headerSliderDepGroupNum[e].style.left="400px";
-    headerSliderContainer.style.overflow="scroll";
+    headerSliderContainerDiv.style.overflow="scroll";
 }
 function sliderProgMenu2Back(e){
     headerSliderProgGroupNum[e].style.left="400px";
-    headerSliderContainer.style.overflow="scroll";
+    headerSliderContainerDiv.style.overflow="scroll";
 }
 
         //    start main slider
