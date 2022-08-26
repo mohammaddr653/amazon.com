@@ -567,10 +567,10 @@ div#header-slider{
     transition-duration: 1s;
     overflow: hidden;
 }
-div#header-slider div.header-slider-container{
-    height: 100vh;
-    position: relative;
+div#header-slider div.header-slider-container>div{
     overflow: scroll;
+    position: relative;
+    height: 95vh;
 }
 div#header-slider>div:not(div.header-slider-hello){
     text-align: left;
@@ -580,11 +580,12 @@ div#header-slider div.header-slider-hello{
     font-size: 22px;
     font-weight: bolder;
     text-align: left;
-    height: 50px;
+    height: 5vh;
     color: white;
     padding: 7px;
     width: 400px;
-    position: fixed;
+    /* position: re; */
+    display: block;
     z-index: 6;
     padding-left: 30px;
     padding-bottom: 50px !important;
@@ -701,6 +702,10 @@ div#dig-group-num div div{
     line-height: 50px;
     text-align: left;
 }
+div#dig-group-num div div:hover{
+    background-color: #232f3e32;
+    cursor: pointer;
+}
 div#dig-group-num div a div {
     color: #232F3E;
 }
@@ -739,6 +744,10 @@ div#dep-group-num div div{
     line-height: 50px;
     text-align: left;
 }
+div#dep-group-num div div:hover{
+    background-color: #232f3e32;
+    cursor: pointer;
+}
 div#dep-group-num div a div {
     color: #232F3E;
 }
@@ -774,6 +783,10 @@ div#prog-group-num div div{
     margin-top: 10px;
     line-height: 50px;
     text-align: left;
+}
+div#prog-group-num div div:hover{
+    background-color: #232f3e32;
+    cursor: pointer;
 }
 div#prog-group-num div a div {
     color: #232F3E;
@@ -818,9 +831,13 @@ div#main-container div.store-container div#store-top>div.store-top-select{
     margin-right: 50px;
 }
 div#main-container div.store-container div#store-top>div.store-top-select select{
-    background-color: #00a6ff;
+    background-color: #ededed;
     outline: none;
-    border-radius: 5px;
+    padding: 2px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px 1px #9e9e9e;
+    border-radius: 10px;
     /* padding-left: 100px; */
     text-align: right;
 }
@@ -862,6 +879,9 @@ div#main-container div.store-container div#store-right div.store-right-main>div{
     justify-content: flex-start;
 
 }
+div#main-container div.store-container div#store-right div.store-right-main>div.page-2{
+    display: none;
+}
 
 
                 /* start prod store card */
@@ -871,7 +891,7 @@ div#main-container div.store-container div#store-right div.store-right-main>div{
 div#main-container div.store-container div#store-right div.store-right-main>div div#prod-store-card{
     /* background-color: papayawhip; */
     width: 200px;
-    flex-direction: row;
+    /* flex-direction: row; */
     width: 24%;
     margin: 5px;
     flex-grow: 1;
@@ -973,6 +993,82 @@ div#main-container div.store-container div#store-right div.store-right-main>div 
                         /* end store right */
 
 
+                        /* start store right page */
+
+
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page{
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div{
+    /* border: 1px solid black; */
+    width:450px;
+    margin: 0 auto;
+    /* padding: 10px; */
+    border-radius: 10px;
+    /* display: inline-block; */
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    box-shadow: 0 0 1px 1px rgb(181, 181, 181);
+
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div{
+    display: inline-block;
+    padding: 15px 10px;
+    background-color: white;
+    flex-grow: 1;
+    text-align: center;
+}
+/* div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div p#pg-first-dots{
+    display: none;
+} */
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div:hover{
+    cursor: pointer;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div.page-prev,
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div.page-next{
+    padding: 15px 20px;
+    /* border : 1px solid black; */
+    font-weight: bolder;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div.page-prev{
+    border-right: 1px solid rgb(181, 181, 181);
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div>div.page-next{
+    border-left: 1px solid rgb(181, 181, 181);
+}
+
+
+
+
+                        /* end store right page */
+
+
+
+                        /* start store right help */
+
+
+div#main-container div.store-container div#store-right div.store-right-main>div.store-help{
+    /* background-color: yellow; */
+    padding: 20px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-help>div{
+    line-height: 200%;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-help>div>h3{
+    font-size: 20px;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-help>div>a{
+    color: #005c8e;
+}
+div#main-container div.store-container div#store-right div.store-right-main>div.store-help>div>a:hover{
+    text-decoration:underline;
+}
 
                         /* start store left */
 

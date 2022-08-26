@@ -16,7 +16,7 @@ const headerSliderDigGroupNum= document.getElementsByClassName("dig-menu-2");
 const headerSliderDepGroupNum= document.getElementsByClassName("dep-menu-2");
 const headerSliderProgGroupNum= document.getElementsByClassName("prog-menu-2");
 const headerSliderMenu2Back= document.getElementById("header-slider-dig-h2");
-const headerSliderContainer= document.getElementsByClassName("header-slider-container")[0];
+const headerSliderContainerDiv= document.getElementsByClassName("header-slider-container-div")[0];
 const body=document.getElementsByTagName("body")[0];
 function locChooseOpen(){
     locChoose.style.display="block";
@@ -100,7 +100,7 @@ function headerSliderClose(){
                     break;
                 case "0px":
                     headerSliderDigGroupNum[e].style.left="400px";
-                    headerSliderContainer.style.overflow="scroll";
+                    headerSliderContainerDiv.style.overflow="scroll";
             }
         }
         for (e=0;e<=8;e++){
@@ -109,7 +109,7 @@ function headerSliderClose(){
                     break;
                 case "0px":
                     headerSliderDepGroupNum[e].style.left="400px";
-                    headerSliderContainer.style.overflow="scroll";
+                    headerSliderContainerDiv.style.overflow="scroll";
             }
         }
         for (e=0;e<=8;e++){
@@ -118,7 +118,7 @@ function headerSliderClose(){
                     break;
                 case "0px":
                     headerSliderProgGroupNum[e].style.left="400px";
-                    headerSliderContainer.style.overflow="scroll";
+                    headerSliderContainerDiv.style.overflow="scroll";
             }
         }
         sliderSee1Close();
@@ -128,27 +128,27 @@ function headerSliderClose(){
 }
 function menu2SliderOpenDig(e){
     headerSliderDigGroupNum[e].style.left="0";
-    headerSliderContainer.style.overflow="hidden";
+    headerSliderContainerDiv.style.overflow="hidden";
 }
 function menu2SliderOpenDep(e){
     headerSliderDepGroupNum[e].style.left="0";
-    headerSliderContainer.style.overflow="hidden";
+    headerSliderContainerDiv.style.overflow="hidden";
 }
 function menu2SliderOpenProg(e){
     headerSliderProgGroupNum[e].style.left="0";
-    headerSliderContainer.style.overflow="hidden";
+    headerSliderContainerDiv.style.overflow="hidden";
 }
 function sliderDigMenu2Back(e){
     headerSliderDigGroupNum[e].style.left="400px";
-    headerSliderContainer.style.overflow="scroll";
+    headerSliderContainerDiv.style.overflow="scroll";
 }
 function sliderDepMenu2Back(e){
     headerSliderDepGroupNum[e].style.left="400px";
-    headerSliderContainer.style.overflow="scroll";
+    headerSliderContainerDiv.style.overflow="scroll";
 }
 function sliderProgMenu2Back(e){
     headerSliderProgGroupNum[e].style.left="400px";
-    headerSliderContainer.style.overflow="scroll";
+    headerSliderContainerDiv.style.overflow="scroll";
 }
 
 
@@ -156,7 +156,6 @@ function sliderProgMenu2Back(e){
 
 
 
-// var inputInStoreLeft = document.querySelectorAll("div#main-container div.store-container div#store-left>div>ul>li.store-left-input-in>input");
 function inputInCheck(e){
     e = e || window.event;
     var target = e.target || e.srcElement;
@@ -171,8 +170,182 @@ function inputInCheck(e){
                     // end store left
 
 
+                    // start store right page
+
+
+
+var pagePrev = document.getElementsByClassName('page-prev')[0];
+var pgFirstCounter = document.getElementById('pg-first-counter');
+var pgFirstDots = document.getElementById('pg-first-dots');
+var pgSecondCounter = document.getElementById('pg-second-counter');
+var pgThirdCounter = document.getElementById('pg-third-counter');
+var pgForthCounter = document.getElementById('pg-forth-counter');
+var pgSecondDots = document.getElementById('pg-second-dots');
+var pageNext = document.getElementsByClassName('page-next')[0];
+var storeRightPage= document.querySelector('div#main-container div.store-container div#store-right div.store-right-main>div.store-right-page>div');
+var pagesNum;
+pagesNum=50;
+var pgCounter=document.getElementsByClassName('pg-counter');
+var pgDots;
+var pgDotsCount=0;
+var pgDots1;
+var pgDotsCount1=0;
+var x=pagesNum+1;
+var y;
+var t=1;
+function addSecondPgDots(){
+    pgDotsCount=pgDotsCount+1;
+    pgDots=document.createElement('div');
+    pgDots.innerHTML="...";
+    pgDots.classList.add("pgDots");
+    if(storeRightPage.children.length==pagesNum+2){
+        storeRightPage.insertBefore(pgDots, storeRightPage.children[pagesNum]);
+    }else{
+        storeRightPage.insertBefore(pgDots, storeRightPage.children[pagesNum+1]);
+    }
+}
+function addFirstPgDots(){
+    pgDotsCount1=pgDotsCount1+1;
+    pgDots1=document.createElement('div');
+    pgDots1.innerHTML="...";
+    pgDots1.classList.add("pgDots1");
+    storeRightPage.insertBefore(pgDots1, storeRightPage.children[2]);
+}
+for(var n=1;n<=pagesNum;n++){
+    x=x-1;
+    var pageNumber=document.createElement('div');
+    storeRightPage.insertBefore(pageNumber, storeRightPage.children[1]);
+    pageNumber.classList.add('pg-counter');
+    pageNumber.setAttribute("onclick","pageMoves(event)");
+    pageNumber.innerHTML=x;
+}
+if(pagesNum>=5){
+    var min=3;
+    var max=pagesNum-2;
+    for(min;min<=max;min++){
+        pgCounter[min].style.display="none";
+    }
+    addSecondPgDots();
+}
+pgCounter[t-1].style.backgroundColor="#9e9e9e";
+function pageMoves(e){
+    if(e==event){
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        y=parseInt(target.innerHTML)-t;
+        t=parseInt(target.innerHTML);
+        if(y>0){
+            pageMovesToRight();
+        }
+        if(y<0){
+            pageMovesToLeft();
+        }
+        if(t>=5){
+            var min=1;
+            var max=t-3;
+            for(min;min<=max;min++){
+                pgCounter[min].style.display="none";
+            }    
+        }
+    }
+    if(e=="right"){
+        y=1;
+        if(t==pagesNum-1||t==pagesNum){
+            t=pagesNum;
+        }else{
+            t=t+1; 
+        }
+        console.log(t);
+        pageMovesToRight();
+        if(t>=5){
+            var min=1;
+            var max=t-3;
+            for(min;min<=max;min++){
+                pgCounter[min].style.display="none";
+            }    
+        }
+    }
+    if(e=="left"){
+        y=-1;
+        if(t==1){
+            t=1;
+        }else{
+            t=t-1; 
+        }
+        pageMovesToLeft();
+        if(t>=5){
+            var min=1;
+            var max=t-3;
+            for(min;min<=max;min++){
+                pgCounter[min].style.display="none";
+            }    
+        }
+    }
+}
+function rightWithNext(){
+    pageMoves("right");
+}
+function leftWithPrev(){
+    pageMoves("left");
+}
+function pageMovesToRight(){
+    pgCounter[t-1].style.backgroundColor="#9e9e9e";
+    pgCounter[t-1-y].style.backgroundColor="white";
+    pgCounter[t-2].style.display="block";
+    if(t<pagesNum-1){
+        pgCounter[t].style.display="block";
+        if(t>=5){
+            var min=1;
+            var max=t-3;
+            for(min;min<=max;min++){
+                pgCounter[min].style.display="none";
+            }    
+        }
+    }else{
+        pgDots.remove();
+        pgDotsCount=0;
+    }
+    if(t>=5 && pgDotsCount1==0){
+        addFirstPgDots();
+    }
+}
+function pageMovesToLeft(){
+    pgCounter[t-1].style.backgroundColor="#9e9e9e";
+    pgCounter[t-1-y].style.backgroundColor="white";
+    if(t>=3){
+        pgCounter[t-2].style.display="block";
+    }
+    if(t>=2 && t<pagesNum-2){
+        pgCounter[t+1].style.display="none";
+    }
+    if(t<pagesNum-1 && pgDotsCount==0){
+        addSecondPgDots();
+    }
+    if(t==3){
+        pgDots1.remove();
+        pgDotsCount1=0;
+    }
+    if(-y<=pagesNum-1 && t==1){
+        var min=3;
+        var max=pagesNum-2;
+        for(min;min<=max;min++){
+            pgCounter[min].style.display="none";
+        }    
+        if(pgDotsCount1==1){
+            pgDots1.remove();
+            pgDotsCount1=0;
+        }
+        pgCounter[1].style.display="block";
+        pgCounter[2].style.display="block";
+    }
+}
+
+
+
 
                     // start recommend slider
+
+
 
 
 var recommendMainSlide = document.getElementsByClassName('recommend-main-slide');
