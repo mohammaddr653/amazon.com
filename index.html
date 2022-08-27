@@ -1,0 +1,3187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="amazon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>amazon</title>
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <div class="header-top">
+                <a href="amazon.html">
+                    <div id="header-top-logo">
+                            <img src="images/Amazon_logo.svg.png" alt="">
+                    </div>
+                </a>
+                <div id="header-top-deliver" onclick="locChooseOpen()">
+                    <p>Deliver to</p>
+                    <p class="header-top-deliver-loc"><i class="material-icons" style="font-size:20px">location_on</i>Iran,Islamic Republic</p>
+                </div>
+                <div id="header-top-search">
+                    <div>
+                        <select class="header-top-search-filter">
+                            <option value="">option1</option>
+                            <option value="">option2</option>
+                            <option value="">option3</option>
+                            <option value="">option4</option>
+                            <option value="">option5</option>
+                            <option value="">option6</option>
+                        </select>
+                        <input type="text">
+                        <div class="header-top-search-submit">
+                            <i class="fa fa-search" style="font-size:20px"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <a href="" onmouseenter="nationChooseOpen()" onmouseleave="nationChooseClose()">
+                    <div id="header-top-nation">
+                        <div class="header-top-nation-dropdown">
+                            <img src="images/Flag_of_the_United_States.svg" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="" onmouseenter="headerSignOpen()" onmouseleave="headerSignClose()">
+                    <div id="heador-top-sign">
+                            <p>Hello, Sign in</p>
+                            <p class="header-top-deliver-loc">Accounts & Lists</p>    
+                    </div>
+                </a>
+                <a href="">
+                    <div id="heador-top-orders">
+                        <p>Returns</p>
+                        <p class="header-top-deliver-loc">& Orders</p>    
+                    </div>
+                </a>
+                <a href="">
+                    <div id="header-top-cart">
+                            <p><i class="fa fa-shopping-cart" style="font-size:25px;color:#232F3E"></i></p>
+                            <p>Cart</p>
+                            <div id="header-top-cart-counter">0</div>
+                    </div>
+                </a>
+            </div>
+            <div class="header-bottom">
+                <div class="header-bottom-All" onclick="headerSliderOpen()">
+                    <i class="material-icons" style="font-size:38px;color:#ffffff">menu</i>
+                    <p>All</p>
+                </div>
+                <a href="">
+                    <div class="header-bottom-today">
+                        <p>Today's Deals</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="header-bottom-customer">
+                        Customer Service
+                    </div>
+                </a>
+                <a href="">
+                    <div class="header-bottom-regis">
+                        <p>Registry</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="header-bottom-gift">
+                        <p>Gift Cards</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="header-bottom-sell">
+                        <p>Sell</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="loc-choose">
+            <div class="loc-choose-top">
+                <h3>Choose your location</h3>
+            </div>
+            <div class="loc-choose-bott">
+                <p>Delivery options and delivery speeds may vary for different locations</p>
+                <button value="Sign in to see your addresses">Sign in to see your addresses</button>
+                <br>
+                <span class="loc-choose-bott-zip-divide">or enter a US zip code</span>
+                <div id="US-zip-code">
+                   <input type="text">
+                   <button>apply</button>
+                   <p class="US-zip-code-error">Please enter a valid US zip code</p> 
+                </div>
+                <span class="loc-choose-bott-ship-divide">or</span>
+                <select class="ship-outside">
+                    <option value="">option1</option>
+                    <option value="">option2</option>
+                    <option value="">option3</option>
+                    <option value="">option4</option>
+                    <option value="">option5</option>
+                    <option value="">option6</option>
+                </select>
+                <button id="loc-choose-submit" value="submit">Done</button>
+            </div>
+        </div>
+        <div id="nation-choose" onmouseenter="nationChooseOpen()" onmouseleave="nationChooseClose()">
+            <div class="nation-choose-part-one">
+                <p>Change language</p><span><a href="">Learn more</a></span>
+                <br>
+                <br>
+                <input type="checkbox"> English - EN
+            </div>
+        
+            <hr>
+            <div class="nation-choose-part-two">
+                <input type="checkbox"> العربیه <br>
+                <input type="checkbox"> English - EN <br>
+                <input type="checkbox"> English - EN <br>
+                <input type="checkbox"> English - EN
+            </div>
+            <hr>
+            <div class="nation-choose-part-three">
+                <p>Change currency</p><span><a href="">Learn more</a></span>
+                <br>
+                <br>
+                <p>$-USD-US Dollar </p><span><a href="">Change</a></span>
+            
+            </div>
+            <hr>
+            <div class="nation-choose-part-four">
+                <p>You are shopping on Amazon.com</p>
+                <a href="">change country/region</a>
+            </div>
+        </div>          
+        <div id="header-sign-in" onmouseenter="headerSignOpen()" onmouseleave="headerSignClose()">
+            <div class="header-sign-in-top">
+                <div><h2>Sign in</h2></div>
+                <p>New customer ?</p><span><a href="">Start here</a></span>
+            </div>
+            <hr>
+            <div class="header-sign-in-bott">
+                <div class="header-sign-in-bott-left">
+                    <h3>Your Lists</h3>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Find a List or Registry</p></a>
+                    <a href=""><p>AmazonSmile Charity Lists</p></a>
+                </div>
+                <div class="header-sign-in-bott-divide"></div>
+                <div class="header-sign-in-bott-right">
+                    <h3>Your Account</h3>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                    <a href=""><p>Create a List</p></a>
+                </div>
+            </div>
+        </div>
+        <div id="header-slider">
+            <div class="header-slider-container">
+                <a href="">
+                    <div class="header-slider-hello">
+                        <p><i class="material-icons" style="font-size:30px;color:white">account_circle</i> Hello , Sign in</p>
+                    </div>
+                </a>
+                <div class="header-slider-container-div">
+                    <div class="header-slider-dig">
+                        <div class="header-slider-dig-h2">
+                           <h2>Digital Content & Devices</h2>
+                        </div>
+                        <div onclick="menu2SliderOpenDig(0)">
+                            <p>dig product group 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenDig(1)">
+                            <p>dig product group 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenDig(2)">
+                            <p>dig product group 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="header-slider-dep">
+                        <div class="header-slider-dep-h2">
+                            <h2>Shop By Department</h2>
+                        </div>
+                        <div onclick="menu2SliderOpenDep(0)">
+                            <p>Electronics <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenDep(1)">
+                            <p>dep product group 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenDep(2)">
+                            <p>dep product group 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenDep(3)">
+                            <p>dep product group 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-see header-slider-see-1">
+                            <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(4)">
+                                <p>see group 5 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(5)">
+                                <p>see group 6 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(6)">
+                                <p>see group 7 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(7)">
+                                <p>see group 8 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-dep-see" onclick="menu2SliderOpenDep(8)">
+                                <p>see group 9 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </div>
+                        <div id="header-slider-dep-see-more">
+                            <p>See All <i class="fa fa-chevron-down dep-see-more-down" style="font-size:15px"></i></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="header-slider-prog">
+                        <div class="header-slider-prog-h2">
+                            <h2>Programs & Features</h>
+                        </div>
+                        <div onclick="menu2SliderOpenProg(0)">
+                            <p>prog product group 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenProg(1)">
+                            <p>prog product group 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenProg(2)">
+                            <p>prog product group 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div onclick="menu2SliderOpenProg(3)">
+                            <p>prog product group 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                        </div>
+                        <div class="header-slider-see header-slider-see-2">
+                            <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(4)">
+                                <p>see group 5 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(5)">
+                                <p>see group 6 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(6)">
+                                <p>see group 7 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(7)">
+                                <p>see group 8 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                            <div class="header-slider-prog-see" onclick="menu2SliderOpenProg(8)">
+                                <p>see group 9 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </div>
+                        <div id="header-slider-prog-see-more">
+                            <p>See All <i class="fa fa-chevron-down prog-see-more-down" style="font-size:15px"></i></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="header-slider-help">
+                        <div class="header-slider-help-h2">
+                            <h2>Help & Settings</h2>
+                        </div>
+                        <div>
+                            <p>help product group 1</p>
+                        </div>
+                        <div>
+                            <p>help product group 2</p>
+                        </div>
+                        <div>
+                            <p>help product group 3</p>
+                        </div>
+                        <div>
+                            <p>help product group 4</p>
+                        </div>
+                        <div>
+                            <p>help product group 5</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+                
+            <div id="dig-group-num" class="dig-menu-2 dig-group-1">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDigMenu2Back(0)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dig-h2">
+                            <h2>group 1 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dig-group-num" class="dig-menu-2 dig-group-2">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDigMenu2Back(1)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dig-h2">
+                            <h2>group 2 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="dig-group-num" class="dig-menu-2 dig-group-3">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDigMenu2Back(2)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dig-h2">
+                            <h2>group 3 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dig menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-1">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(0)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 1 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="amazon store.html">
+                            <div>
+                                <p>Headphones <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-2">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(1)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 2 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-3">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(2)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 3 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-4">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(3)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 4 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-5">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(4)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 5 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-6">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(5)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 6 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-7">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(6)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 7 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="dep-group-num" class="dep-menu-2 dep-group-8">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(7)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 8 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="dep-group-num" class="dep-menu-2 dep-group-9">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderDepMenu2Back(8)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-dep-h2">
+                            <h2>group 9 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>dep menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-1">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(0)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 1 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-2">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(1)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 2 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-3">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(2)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 3 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="prog-group-num" class="prog-menu-2 prog-group-4">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(3)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 4 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-5">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(4)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 5 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-6">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(5)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 6 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="prog-group-num" class="prog-menu-2 prog-group-7">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(6)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 7 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div> 
+                        </a>
+                    </div>       
+            </div>
+
+
+            <div id="prog-group-num" class="prog-menu-2 prog-group-8">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(7)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 8 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+            <div id="prog-group-num" class="prog-menu-2 prog-group-9">
+                    <div>
+                        <div class="header-slider-menu2-back" onclick="sliderProgMenu2Back(8)">
+                            <h2><i class="fa fa-arrow-circle-left" style="font-size:25px"></i> MAIN MENU</h2>
+                        </div>
+                        <hr>
+                        <div class="header-slider-prog-h2">
+                            <h2>group 9 products in menu 2</h2>
+                        </div>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 1 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 2 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 3 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>prog menu 2 product 4 <i class="fa fa-chevron-right" style="font-size:20px"></i></p>
+                            </div>
+                        </a> 
+                    </div>       
+            </div>
+        </div>
+        <div id="header-background-black-screen" onclick="locChooseClose(),headerSliderClose()"></div>
+        <div id="body-background-black-screen" onclick="locChooseClose(),headerSliderClose()"></div>
+    </header>
+    <main>
+        <div id="main-container">
+            <div class="main-slider">
+                <div class="main-slider-container">
+                    <div class="main-slider-move main-slider-move-back" onclick="mainSliderMoveBack()">
+                        <p><i class="fa fa-angle-left" style="font-size:60px"></i></p>
+                    </div>
+                    <div class="main-slider-move main-slider-move-next" onclick="mainSliderMoveNext()">
+                        <p><i class="fa fa-angle-right" style="font-size:60px"></i></p>
+                    </div>
+                    <div class="main-slider-container-slider">
+                        <div class="main-slider-images">
+                            <a href=""><img src="images/61TD5JLGhIL._SX3000_.jpg"/></a>
+                            <a href=""><img src="images/61DUO0NqyyL._SX3000_.jpg"/></a>
+                            <a href=""><img src="images/61jovjd+f9L._SX3000_.jpg"/></a>
+                            <a href=""><img src="images/71qid7QFWJL._SX3000_.jpg"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-rows">
+                <div class="main-row main-row-1">
+                    <div class=" row1-content row1-content1 window4-content">
+                        <div class="row1-content-header">
+                            <h3>Gaming Accessories</h3>
+                        </div>
+                        <div class="row1-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg" alt="">
+                                    <div>
+                                        <label for="">Headsets</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Keyboard_1x._SY116_CB667159063_.jpg" alt="">
+                                    <div>
+                                        <label for="">Keyboard</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" alt="">
+                                    <div>
+                                        <label for="">Computer mice</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Chair_1x._SY116_CB667159060_.jpg" alt="">
+                                    <div>
+                                        <label for="">Chairs</label>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row1-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row1-content row1-content2 window4-content">
+                        <div class="row1-content-header">
+                            <h3>Shop by Category</h3>
+                        </div>
+                        <div class="row1-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/computer120x._SY85_CB468850970_.jpg" alt="">
+                                    <div>
+                                        <label for="">Computer and Accessories</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/PS4_120X._SY85_CB438749318_.jpg" alt="">
+                                    <div>
+                                        <label for="">Video Games</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Baby120X._SY85_CB468850882_.jpg" alt="">
+                                    <div>
+                                        <label for="">Baby</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Toys120X._SY85_CB468851693_.jpg" alt="">
+                                    <div>
+                                        <label for="">Toys and Games</label>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row1-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row1-content row1-content3 window1-content">
+                        <div class="row1-content-header">
+                            <h3>Dresses</h3>
+                        </div>
+                        <div class="row1-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_dash_dress_1X._SY304_CB626369146_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row1-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row1-content row1-content4 signin-adds-content">
+                        <div class="row1-content4-top">
+                            <p>Sign in for the best experience</p>
+                            <button>Sign in securely</button>
+                        </div>
+                        <div class="row1-content4-bottom">
+                            <a href="">
+                                <img src="images/Fuji_D2_45M_en_US_1x._CB418309979_.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-row main-row-2">
+                    <div class=" row2-content row2-content1 window1-content">
+                        <div class="row2-content-header">
+                            <h3>Get fit at home</h3>
+                        </div>
+                        <div class="row2-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row2-content-footer">
+                            <a href="">See more</a>
+                        </div>
+
+                    </div>
+                    <div class=" row2-content row2-content2 window1-content">
+                        <div class="row2-content-header">
+                            <h3>Electronics</h3>
+                        </div>
+                        <div class="row2-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row2-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row2-content row2-content3 window1-content">
+                        <div class="row2-content-header">
+                            <h3>Computers & Accessories</h3>
+                        </div>
+                        <div class="row2-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row2-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row2-content row2-content4 window1-content">
+                        <div class="row2-content-header">
+                            <h3>Health & Personal Care</h3>
+                        </div>
+                        <div class="row2-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._SY304_CB627424361_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row2-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-row main-row-3">
+                    <div class=" row3-content row3-content1 sliding-content">
+                        <div class="row3-content-header">
+                            <h3>Top Sellers in Books for you</h3>
+                        </div>
+                        <div class="row3-content-main">
+                            <div class="row3-content-main-move row3-content-main-move-back">
+                                <p><i class="fa fa-angle-left" style="font-size:60px"></i></p>
+                            </div>
+                            <div class="row3-content-main-move row3-content-main-move-next">
+                                <p><i class="fa fa-angle-right" style="font-size:60px"></i></p>
+                            </div>
+                            <div id="row3-content-main-slider">
+                                <a href="">
+                                    <img src="images/61Ars9rdgGS._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/71aLultW5EL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/91cqEsyjd-L._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/8181NkFL6SL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/91g+FlNm0oL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/91rNSPVrrjL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/81PR3BDkqWL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/81EVdWdmOKL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/917M-S0wz7L._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/814TCW6Y7hL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/91oEavHTylL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/A110vzie0nL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/616XQgErWiL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/612AKvzu1JL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/61AqjgMxpLL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/91BdulrP5SL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/61kDZZMj4lS._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/71W9WWt6k5L._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/71xYW677xDL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/81t-IstQ+ZL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/719F6ozTuQL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/612JQc4mXaL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/811ftjOO5FL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/81bIWCSCVhL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/A12jXeTksPL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/61rSMJLrg9L._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/91laaRz2A2L._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/8144Vic9C5L._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/A1mHoq8NCIL._AC_SY200_.jpg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/A1LASQ23yKL._AC_SY200_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-row main-row-4">
+                    <div class=" row4-content row4-content1 window1-content">
+                        <div class="row4-content-header">
+                            <h3>Shop Laptops & Tablets</h3>
+                        </div>
+                        <div class="row4-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row4-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row4-content row4-content2 window1-content">
+                        <div class="row4-content-header">
+                            <h3>Create with strip lights</h3>
+                        </div>
+                        <div class="row4-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_StripLighting_379x304_1X_en_US._SY304_CB418597476_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row4-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row4-content row4-content3 window1-content">
+                        <div class="row4-content-header">
+                            <h3>For your Fitness Needs</h3>
+                        </div>
+                        <div class="row4-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_Fitness_1X._SY304_CB639748186_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row4-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row4-content row4-content4 window1-content">
+                        <div class="row4-content-header">
+                            <h3>Kindle E readers</h3>
+                        </div>
+                        <div class="row4-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Desktop_Dash_Kindle_1x._SY304_CB639752818_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row4-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-row main-row-5">
+                    <div class=" row5-content row5-content1 window4-content">
+                        <div class="row5-content-header">
+                            <h3>Gaming merchandise</h3>
+                        </div>
+                        <div class="row5-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Apparel_1x._SY116_CB667159060_.jpg" alt="">
+                                    <div>
+                                        <label for="">Apparel</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Hat_1x._SY116_CB667159060_.jpg" alt="">
+                                    <div>
+                                        <label for="">Hats</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Figure_1x._SY116_CB667159060_.jpg" alt="">
+                                    <div>
+                                        <label for="">Action figures</label>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Quad_Mug_1x._SY116_CB667159063_.jpg" alt="">
+                                    <div>
+                                        <label for="">Mugs</label>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row5-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row5-content row5-content2 window1-content">
+                        <div class="row5-content-header">
+                            <h3>Activity trackers and smartwatches</h3>
+                        </div>
+                        <div class="row5-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_SmartWatch_1X._SY304_CB639922137_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row5-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row5-content row5-content3 window1-content">
+                        <div class="row5-content-header">
+                            <h3>New arrivals in Toys</h3>
+                        </div>
+                        <div class="row5-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_Toys_1X._SY304_CB639759658_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row5-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                    <div class=" row5-content row5-content4 window1-content">
+                        <div class="row5-content-header">
+                            <h3>Shop Pet supplies</h3>
+                        </div>
+                        <div class="row5-content-main">
+                            <div>
+                                <a href="">
+                                    <img src="images/Fuji_Dash_Pets_1X._SY304_CB639746743_.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row5-content-footer">
+                            <a href="">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-recommend">
+                <div class="main-recommend-content">
+                    <div class="recommend-header">
+                        <h3>Customers who viewed items in your browsing history also viewed</h3>
+                        <div class="recommend-header-counter">
+                            <p>page <span class="counter-now"></span> of <span class="counter-all">7</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-main">
+                        <div class="recommend-move recommend-move-back" onclick="recommendSlideBack()">
+                            <p><i class="fa fa-angle-left" style="font-size:30px"></i></p>
+                        </div>
+                        <div class="recommend-move recommend-move-next" onclick="recommendSlideNext()">
+                            <p><i class="fa fa-angle-right" style="font-size:30px"></i></p>
+                        </div>    
+                        <div class="recommend-main-slide slide-1">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81nzxODnaJL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>If Animals Kissed Good Night</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/A19DoYJqZdL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Rainbow Fish Board Book, The</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/51o4b5AdNLL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Where's Spot?</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71FVbHHW+AL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Going-To-Bed Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91cqEsyjd-L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Very Hungry Caterpillar</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71VE6jaZJeL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Dear Zoo: A Lift-the-Flap Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71lA0HMqndL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Pout-Pout Fish</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-main-slide slide-2">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/8144Vic9C5L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>I Love You to the Moon and Back</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81yYivG7NzL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Bright Baby Touch & Feel Baby Animals (Bright Baby Touch and Feel)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/A1BDKiVpW6L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Good Night, Gorilla</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71QmQucSriL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Where Is Baby's Belly Button? A Lift-the-Flap Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71wiGMKadmL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Giving Tree</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91ez0tE0rfL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Mitten</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91tBaQgfHeL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Where the Wild Things Are</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-main-slide slide-3">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/819v3bE727L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Foot Book: Dr. Seuss's Wacky Book of Opposites</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91K20PnjefL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>On the Night You Were Born</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81tLLQbBccL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Snowy Day Board Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91HHxxtA1wL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Wonderful Things You Will Be</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/813csV5cPqL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>If You Give a Mouse a Cookie</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81k1b6u4YvL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>See, Touch, Feel: A First Sensory Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/61lJ27S8XuL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Goodnight, Goodnight Construction Site (Board Book for Toddlers, Children's Board Book)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-main-slide slide-4">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91dIQaCf1WL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Giraffes Can't Dance</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81ULPGjs08L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Barnyard Dance! (Boynton on Board)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81JtslkHEoL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Little Green Box of Bright and Early Board Books: Fox in Socks; Mr. Brown Can Moo! Can You?; There's a Wocket in My Pocket!; </h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71COtxLge3L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Are You My Mother? (Bright & Early Board Books(TM))</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81NxXxzz6jL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Little Blue Truck Board Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81k3xx121rL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>One Fish Two Fish Red Fish Blue Fish</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71aMpgf078L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>First 100 Words: A Padded Board Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-main-slide slide-5">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81FCw1NrcJL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Dr. Seuss's ABC: An Amazing Alphabet Book!</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/71WH45AZE4L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Everything Is Mama (Package May Vary)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/916o5aNYaDL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Grumpy Monkey</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/51dxWXcAKxL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Pat the Bunny (Touch and Feel Book)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91L+21BMNES._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Woodland Dance! (Boynton on Board)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/61EYW6bgePL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Blue Hat, Green Hat (Boynton Board Books)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91WuHblNkEL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Goodnight Moon</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-main-slide slide-6">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/711WZWAEMhL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Polar Bear, Polar Bear, What Do You Hear? (Brown Bear and Friends)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/717v+SFE4rL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Time for Bed Board Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81lPRxhJyTL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Goodnight Moon Milestone Edition: Book and Milestone Cards</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/817u4Bp0vjL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Hand, Hand, Fingers, Thumb (Bright & Early Board Books)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/61g6RjY3v2L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>But Not the Armadillo</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/91pdllYEUfL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>The Rainbow Fish</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/A1wx+e0rJ2L._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Where the Wild Things Are</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-main-slide slide-7">
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/81e4jgomhKL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>7 guess how much I love you</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/61EYW6bgePL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Blue Hat, Green Hat (Boynton Board Books)</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/81NxXxzz6jL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Little Blue Truck Board Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-container-img">
+                                    <a href="">
+                                        <img src="images/books/916o5aNYaDL._AC_UL160_SR160,160_.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slide-container-name">
+                                    <a href="">
+                                        <h3>Little Blue Truck Board Book</h3>
+                                        <p>Sam McBratney</p>
+                                    </a>
+                                </div>
+
+                                <div class="slide-container-stars">
+                                    <a href="">
+                                        <p></p>
+                                    </a>
+                                    <p>Board book</p>
+                                    <a href="">
+                                        <p><span>#1 best seller</span> in</p>
+                                        <p>children's bear books</p>
+                                    </a>
+                                </div>
+                                <div class="slide-container-price">
+                                    <a href="">
+                                        <p>$ <span>4.31</span></p>
+                                    </a>
+                                    <p>$ <span>4.31</span> shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-footer">
+                        <p>See personalized recommendations</p>
+                        <button>Sign in</button>
+                        <p>New customer? <a href="">Start here</a> .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="footer-top">
+                <div class="back-to-top" onclick="winBacktoTop()">
+                    <p>Back to top</p>
+                </div>
+                <div class="footer-top-main">
+                    <div>
+                        <h3>Get to Know Us</h3>
+                        <p><a href="">Careers</a></p>
+                        <p><a href="">Blog</a></p>
+                        <p><a href="">About Amazon</a></p>
+                        <p><a href="">Invastor Relations</a></p>
+                        <p><a href="">Amazon Devices</a></p>
+                        <p><a href="">Amazon Science</a></p>
+                    </div>
+                    <div>
+                        <h3>Make Money with Us</h3>
+                        <p><a href="">Sell Products On Amazon</a></p>
+                        <p><a href="">Sell on Amazon Buisness</a></p>
+                        <p><a href="">Sell Apps on Amazon</a></p>
+                        <p><a href="">Become an Affiliate</a></p>
+                        <p><a href="">Advertise Your Products</a></p>
+                        <p><a href="">Self-Publish with Us</a></p>
+                        <p><a href="">Host On Amazon Hub</a></p>
+                        <p><a href="">See More Make Money With Us</a></p>
+                    </div>
+                    <div>
+                        <h3>Amazon Payment Products</h3>
+                        <p><a href="">Amazon Business Card</a></p>
+                        <p><a href="">Shop with Points</a></p>
+                        <p><a href="">Reload Your Balance</a></p>
+                        <p><a href="">Amazon Currency Convert</a></p>
+                    </div>
+                    <div>
+                        <h3>Let Us Help You</h3>
+                        <p><a href="">Amazon And COVID-19</a></p>
+                        <p><a href="">Your Account</a></p>
+                        <p><a href="">Your Orders</a></p>
+                        <p><a href="">Shipping Rates & Policies</a></p>
+                        <p><a href="">Returns & and Replacements</a></p>
+                        <p><a href="">Manage Your Content and Devices</a></p>
+                        <p><a href="">Amazon Assistant</a></p>
+                        <p><a href="">Help</a></p>
+                    </div>
+                </div>
+                <div class="footer-top-foot">
+                    <div class="footer-top-foot-logo">
+                        <a href="">
+                            <img src="images/Amazon_logo.svg.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer-top-foot-buttons">
+                        <a href="" onmouseenter="nationChoose1Open()" onmouseleave="nationChoose1Close()">
+                            <div id="footer-nation-choose1">
+                                <p>English</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>$ <span>USD-U.S. Dollar</span></p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <p>United States</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-main">
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Music</h5>
+                                <p>Stream Millions of Songs</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Sell on Amazon</h5>
+                                <p>Start a Selling Account</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Book Depository</h5>
+                                <p>Books With Free Delivery Worldwide</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>IMDbPro</h5>
+                                <p>Get Info Entertainment Professionals Need</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Advertising</h5>
+                                <p>Find,attract,and engage customers</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Business</h5>
+                                <p>Everything For Your Business</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Box Office Mojo</h5>
+                                <p>Find Movie Box Office Data</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Kindle Direct Publishing</h5>
+                                <p>Indie Digital & Print Publishing Made Easy</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>eero WiFi</h5>
+                                <p>Stream 4k Video in Every Room</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Drive</h5>
+                                <p>Cloud storage from Amazon</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Global</h5>
+                                <p>Ship Orders Internationally</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>ComiXology</h5>
+                                <p>Thousands of Digital Comics</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Prime Video Direct</h5>
+                                <p>Video Distribution Made Easy</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Blink</h5>
+                                <p>Smart Security for Every Home</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>6pm</h5>
+                                <p>Score deals on fashion brands</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Home Services</h5>
+                                <p>Experienced Pros Happiness Guarantee</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>DPReview</h5>
+                                <p>Digital Photography</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Shopbop</h5>
+                                <p>Designer Fashion Brands</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Neighbors App</h5>
+                                <p>Real-Time Crime & Safety Alerts</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>AbeBooks</h5>
+                                <p>Books,art & collectibles</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Ignite</h5>
+                                <p>Sell,your original Digital Educational Resources</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Fabric</h5>
+                                <p>Sewing, Quiliting & Knitting</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Woot!</h5>
+                                <p>Deals and Shenanigans</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Subscription Boxes</h5>
+                                <p>Top subscription boxes-right to your door</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>ACX</h5>
+                                <p>Audiobook Publishing Made Easy</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Amazon Web Services</h5>
+                                <p>Scalable Cloud Computing Services</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Goodreads</h5>
+                                <p>Book reviews & recommendations</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Zappos</h5>
+                                <p>Shoes & Clothing</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>PillPack</h5>
+                                <p>Pharmacy Simplified</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="">
+                                <h5>Alexa</h5>
+                                <p>Actionable Analytics for the Web</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Audible</h5>
+                                <p>Listen to Books & Original Audio Performances</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>IMDb</h5>
+                                <p>Movies, TV & Celebrities</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <h5>Ring</h5>
+                                <p>Smart Home Security Systems</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom-foot">
+                    <a href="">Conditions of Use</a>
+                    <a href="">Privacy Notice</a>
+                    <a href="">Interest-Based Ads</a>
+                    <p>© 1996-2022, Amazon.com, Inc. or its affiliates</p>
+                </div>
+            </div>    
+        </div>
+        <div id="nation-choose1" onmouseenter="nationChoose1Open()" onmouseleave="nationChoose1Close()">
+            <div class="nation-choose-part-one">
+                <p>Change language</p><span><a href="">Learn more</a></span>
+                <br>
+                <br>
+                <input type="checkbox"> English - EN
+            </div>
+        
+            <hr>
+            <div class="nation-choose-part-two">
+                <input type="checkbox"> العربیه <br>
+                <input type="checkbox"> English - EN <br>
+                <input type="checkbox"> English - EN <br>
+                <input type="checkbox"> English - EN
+            </div>
+        </div>          
+    </footer>
+    <script src="amazon.js"></script>
+</body>
+</html>
