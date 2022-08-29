@@ -344,22 +344,6 @@ function pageMovesToLeft(){
 
                     // end store right page
 
-                    // start prod store card creator
-
-                    
-
-var storeRightMain = document.querySelector("div#main-container div.store-container div#store-right div.store-right-main");
-function pageCreator(){
-    var mydata = JSON.parse('headphones');
-    alert("hello");
-    // for(var n=0; n<=)
-}
-pageCreator();
-
-
-
-
-                    // end prod store card creator
 
                     // start recommend slider
 
